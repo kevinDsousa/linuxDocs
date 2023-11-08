@@ -1,0 +1,43 @@
+# Comando Sha256sum
+
+O comando `sha256sum` é uma ferramenta de linha de comando que calcula e exibe o valor de verificação SHA-256 (Secure Hash Algorithm 256 bits) de um arquivo no sistema Unix e Linux. O SHA-256 é uma função de hash que produz um valor de hash de 256 bits (32 bytes) a partir dos dados do arquivo. É amplamente utilizado em segurança da informação e criptografia para verificar a integridade de arquivos e senhas, além de ser uma das funções de hash mais seguras disponíveis.
+
+Aqui estão alguns pontos importantes sobre o comando `sha256sum`:
+
+## Cálculo do Hash SHA-256: 
+
+O comando sha256sum calcula o valor de hash SHA-256 de um arquivo específico. O resultado é uma sequência hexadecimal de 64 caracteres que representa exclusivamente o conteúdo do arquivo.
+
+## Verificação de Integridade: 
+
+A principal finalidade do sha256sum é verificar a integridade de arquivos. Isso é feito calculando o valor de hash SHA-256 do arquivo original e comparando-o com um valor de hash SHA-256 fornecido. Se os valores forem iguais, isso indica que o arquivo não foi corrompido ou modificado.
+
+## Sintaxe Básica: A sintaxe básica do comando sha256sum é a seguinte:
+
+`sha256sum nome_do_arquivo`
+
+Isso calculará o valor SHA-256 para o arquivo especificado e o exibirá na saída padrão.
+
+## Comparação de Hashes: 
+
+Para verificar a integridade de um arquivo, compare o valor SHA-256 calculado com o valor SHA-256 fornecido pelo remetente ou disponível no site de download. Se os valores forem diferentes, isso indica uma possível corrupção ou modificação do arquivo.
+
+## Segurança Robusta: 
+
+O SHA-256 é considerado um algoritmo de hash robusto e é amplamente utilizado em criptografia e segurança. Ele oferece uma maior resistência a colisões e prevenção de falsificação em comparação com algoritmos mais fracos, como o MD5.
+
+## Uso em Scripts e Automação: 
+
+Assim como o md5sum, o sha256sum pode ser usado em scripts para automatizar a verificação da integridade de arquivos. Isso é particularmente útil ao lidar com transferências de arquivos ou download de pacotes.
+
+## Outros Comandos de Hash: 
+
+Além do sha256sum, existem outros comandos de hash, como sha1sum, sha384sum e sha512sum, que usam algoritmos de hash SHA com diferentes tamanhos de saída. A escolha do comando depende dos requisitos de segurança e da política de uso.
+
+O `sha256sum` é uma ferramenta fundamental para garantir a integridade e segurança de arquivos em sistemas Unix e Linux. Devido à sua robustez, é amplamente adotado em diversas aplicações, incluindo verificação de integridade de arquivos, autenticação de senhas, assinaturas digitais e criptografia.
+
+
+
+
+
+

@@ -1,0 +1,61 @@
+# Comando uname
+
+O comando uname é uma ferramenta de linha de comando amplamente utilizada em sistemas Unix e Unix-like, incluindo o Linux. Sua principal função é fornecer informações sobre o sistema operacional e o hardware do sistema, permitindo aos usuários obter detalhes sobre a plataforma em que estão trabalhando. O nome "uname" é uma abreviação de "Unix name".
+
+Aqui estão os principais usos e funcionalidades do comando `uname`:
+
+## Exibição do Nome do Sistema Operacional:
+
+O `uname` pode ser usado para exibir o nome do sistema operacional em execução. Isso é útil para determinar se o sistema está rodando o Linux, o macOS, o FreeBSD ou outro sistema Unix-like.
+
+Exemplo:
+
+`uname -s`
+
+A saída pode ser "Linux", "Darwin" (para macOS), "FreeBSD" ou outros, dependendo do sistema.
+
+## Exibição do Nome do Host:
+
+O comando `uname` pode exibir o nome do host, que é o nome da máquina no qual o sistema está sendo executado.
+
+Exemplo:
+
+`uname -n`
+
+## Exibição da Versão do Kernel:
+
+O `uname` pode ser usado para exibir a versão do kernel do sistema. O kernel é o núcleo do sistema operacional e é uma parte fundamental do sistema.
+
+Exemplo:
+
+`uname -r`
+
+A saída mostrará a versão do kernel, como "5.4.0" no Linux.
+
+## Exibição de Detalhes do Hardware:
+
+O comando uname também pode mostrar informações sobre o hardware do sistema, como a arquitetura da CPU.
+
+Exemplo:
+
+`uname -m`
+
+Isso pode exibir "x86_64" para sistemas de 64 bits, "i686" para sistemas de 32 bits, ou outras informações relacionadas à arquitetura.
+
+## Exibição do Nome da Plataforma:
+
+O `uname` pode ser usado para exibir o nome da plataforma, que fornece informações sobre o hardware e a arquitetura do sistema.
+
+Exemplo:
+
+`uname -i`
+
+## Exibição de Tudo de uma Vez:
+
+Para obter uma visão geral de todas as informações disponíveis, você pode usar o comando `uname` sem opções. Isso exibirá várias informações, incluindo o nome do sistema operacional, o nome do host, a versão do kernel e a arquitetura.
+
+Exemplo:
+
+`uname`
+
+O comando `uname` é útil para identificar rapidamente detalhes do sistema, o que pode ser essencial para diagnóstico, scripts ou quando você precisa determinar a compatibilidade de um software com uma plataforma específica. É uma ferramenta essencial para administradores de sistemas e usuários avançados que trabalham em ambientes Unix e Unix-like.

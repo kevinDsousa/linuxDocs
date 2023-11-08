@@ -1,0 +1,61 @@
+# AND lógico
+O operador lógico "AND" é representado pelo símbolo && e exige que o primeiro comando seja executado com sucesso para que o segundo seja executado. 
+
+Aqui está um exemplo:
+`ls /proc && cat /etc/passwd && cat /etc/group`
+
+Neste caso, os dois comandos são executados.
+
+<CH.Spotlight>
+
+```bash terminal.sh
+ls /proc && cat /etc/passwd
+```
+
+---
+
+Vamos listar a saida de dois comandos usando &&
+
+```bash terminal.sh
+ls /proc && cat /etc/passwd
+```
+
+---
+
+Lista conteúdo da pasta /proc
+
+```bash terminal.sh focus=1[1:8]
+ls /proc && cat /etc/passwd
+```
+
+---
+
+Uso operador lógico &&
+
+```bash terminal.sh focus=1[10:11]
+ls /proc && cat /etc/passwd
+```
+
+---
+
+Adicionado comando cat mostrando passwd
+
+```bash terminal.sh focus=1[13:28]
+ls /proc && cat /etc/passwd
+```
+
+---
+
+Exemplo de saída do comando
+
+```bash terminal.sh
+root:x:0:0:root:/root:/bin/bash
+user1:x:1000:1000:User 1:/home/user1:/bin/bash
+user2:x:1001:1001:User 2:/home/user2:/bin/bash
+...
+
+```
+
+---
+
+</CH.Spotlight>

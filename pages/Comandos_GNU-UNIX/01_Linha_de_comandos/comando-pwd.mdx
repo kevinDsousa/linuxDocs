@@ -1,0 +1,44 @@
+# Comando PWD
+
+O comando `pwd` (Print Working Directory) é uma ferramenta de linha de comando usada em sistemas Unix e Unix-like, incluindo o Linux, para exibir o diretório de trabalho atual em que um usuário está localizado. O diretório de trabalho atual é o diretório em que o usuário está trabalhando no momento e no qual os comandos e operações de arquivo serão executados por padrão.
+
+A função principal do comando pwd é retornar o caminho absoluto para o diretório de trabalho atual. Isso é útil para ajudar os usuários a entenderem onde estão no sistema de arquivos e para verificar ou documentar os caminhos completos para pastas específicas.
+
+A sintaxe do comando pwd é simples e não requer argumentos:
+
+`pdw`
+
+Aqui estão alguns pontos-chave sobre o comando `pwd`:
+
+## Exibição do Diretório de Trabalho Atual:
+
+Quando você executa o comando `pwd`, ele retornará o caminho absoluto para o diretório de trabalho atual. Esse caminho começa com a barra `/` e é a partir da raiz do sistema de arquivos.
+
+Exemplo:
+
+```
+$ pwd
+/home/usuario/meu_diretorio
+```
+
+## Utilidade em Scripts:
+
+O `pwd` é frequentemente usado em scripts para obter o diretório de trabalho atual. Isso permite que scripts acessem arquivos ou recursos no diretório atual, mesmo que o script tenha sido executado de um local diferente.
+
+Exemplo de script que exibe o diretório de trabalho atual:
+
+```
+#!/bin/bash
+echo "Diretório atual: $(pwd)"
+```
+
+## Navegação e Documentação:
+
+O `pwd` é útil para navegação e documentação do sistema de arquivos. Ao trabalhar em ambientes de linha de comando, especialmente em situações de administração de sistemas, entender o diretório de trabalho atual é essencial para evitar erros ao manipular arquivos e pastas.
+
+## Caminho Absoluto:
+
+O caminho retornado pelo `pwd` é um caminho absoluto, o que significa que ele descreve o diretório de trabalho a partir da raiz do sistema de arquivos. Isso fornece uma localização precisa e única para o diretório atual, independentemente de onde o comando é executado.
+
+Em resumo, o comando `pwd` é uma ferramenta fundamental em sistemas Unix e Unix-like para exibir o diretório de trabalho atual. Ele fornece informações importantes para a navegação, documentação e execução de comandos e scripts, ajudando os usuários a entender onde estão no sistema de arquivos e a evitar erros ao trabalhar com arquivos e pastas.
+

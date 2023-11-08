@@ -1,0 +1,59 @@
+# Comando Tr
+
+O comando `tr` é uma ferramenta de linha de comando encontrada em sistemas Unix e Unix-like, como o Linux. O nome "tr" é uma abreviação de "translate" (traduzir), e ele é usado principalmente para traduzir, excluir ou complementar caracteres em um fluxo de texto de entrada (geralmente a partir de um arquivo ou da saída de outro comando) e, em seguida, emitir o resultado.
+
+A sintaxe básica do comando tr é a seguinte:
+
+`tr [OPÇÕES] SET1 [SET2]`
+
+Aqui está uma explicação dos principais componentes e funcionalidades do comando tr:
+
+- SET1: 
+
+O primeiro conjunto de caracteres especifica os caracteres a serem traduzidos, excluídos ou complementados. Você pode fornecer os caracteres individualmente ou como intervalos (por exemplo, "a-z" representa todas as letras minúsculas de "a" a "z"). Normalmente, esse conjunto é usado para especificar os caracteres a serem traduzidos ou excluídos.
+
+- SET2: 
+
+O segundo conjunto de caracteres é usado para especificar os caracteres de substituição correspondentes a SET1. Isso é opcional, e se você não fornecer SET2, o tr excluirá os caracteres especificados em SET1. Se você fornecer SET2, os caracteres em SET1 serão substituídos pelos caracteres correspondentes em SET2.
+
+- Opções: 
+
+O comando tr suporta várias opções que permitem personalizar seu comportamento. Alguns exemplos comuns de opções incluem:
+
+- `-d` ou `--delete`: Esta opção faz com que o tr exclua os caracteres especificados em SET1 em vez de traduzi-los.
+
+- `-s` ou `--squeeze-repeats`: Quando usado em conjunto com SET1 e SET2, esta opção comprimirá sequências de caracteres repetidos para um único caractere. Por exemplo, `tr` `-s` 'a' reduzirá sequências de "a" repetidas a um único "a".
+
+- `-c` ou `--complement`: Essa opção complementa os caracteres em SET1. Por exemplo, `tr` `-c` 'a' 'A' traduzirá todos os caracteres que não sejam "a" para "A".
+
+Aqui estão alguns exemplos de uso do comando tr:
+
+- Traduzir letras minúsculas para maiúsculas:
+
+```
+$ echo "hello" | tr 'a-z' 'A-Z'
+# Saída: HELLO
+```
+
+- Excluir caracteres específicos:
+
+```
+$ echo "Hello, World!" | tr -d ' ,'
+# Saída: HelloWorld!
+```
+
+- Comprimir sequências de caracteres repetidos:
+
+```
+$ echo "aaabbbccc" | tr -s 'a-c'
+# Saída: abc
+```
+
+- Complementar um conjunto de caracteres:
+
+```
+$ echo "hello" | tr -c 'aeiou' '!'
+# Saída: e!!o
+```
+
+O comando `tr` é frequentemente usado em combinação com outros comandos para manipular e transformar dados em pipelines de texto. Ele é uma ferramenta útil para filtrar, substituir e modificar caracteres em texto de entrada de acordo com as necessidades do usuário, tornando-o valioso em tarefas de processamento de texto e automação no ambiente Unix.

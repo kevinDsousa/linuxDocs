@@ -1,0 +1,52 @@
+# Comando Less
+
+O comando `less` é uma ferramenta de visualização de texto em sistemas Unix e Unix-like, incluindo o Linux. O `less` é usado para exibir o conteúdo de arquivos de texto de maneira eficiente, permitindo a rolagem, busca e navegação pelo texto. Ele é uma melhoria em relação ao comando `more` e é uma das ferramentas mais úteis para a leitura de documentos extensos ou para visualização de logs e saídas de comando longas diretamente no terminal.
+
+A sintaxe básica do comando `less` é a seguinte:
+
+`less ARQUIVO`
+
+Aqui estão as principais funcionalidades e usos do comando `less`:
+
+## Visualização de Arquivos de Texto:
+O `less` é usado para visualizar o conteúdo de arquivos de texto diretamente no terminal. Ele permite que você role pelo texto usando as teclas de seta, barra de espaço, Page Up, Page Down e outras teclas de navegação.
+
+Exemplo:
+
+`less arquivo.txt`
+
+Isso abrirá o arquivo "arquivo.txt" para visualização, e você pode rolar pelo texto conforme necessário.
+
+## Pesquisa em Documentos:
+
+O `less` oferece a capacidade de pesquisar palavras-chave no documento em exibição. Pressionando / e digitando a palavra-chave desejada, você pode localizar rapidamente a ocorrência dessa palavra no texto.
+
+Exemplo de pesquisa:
+
+- Pressione `/`.
+- Digite a palavra-chave, por exemplo, "palavra".
+- Pressione Enter para iniciar a pesquisa.
+
+## Navegação por Páginas:
+
+O `less` divide o documento em páginas para facilitar a leitura. Você pode avançar página por página usando a tecla de Page Down (PgDn) e retroceder usando a tecla Page Up (PgUp).
+
+## Visualização de Arquivos Grandes:
+
+O `less` é especialmente útil para visualizar arquivos de texto grandes, como logs de sistema, arquivos de registro e saídas extensas de comandos. Ele carrega o arquivo conforme você rola, o que o torna eficiente mesmo para arquivos muito extensos.
+
+## Encerramento e Saída:
+
+Para sair do `less`, pressione a tecla "q". Isso fecha a visualização e retorna ao prompt de comando.
+
+## Outras Opções e Personalizações:
+
+O `less` possui uma variedade de opções que permitem personalizar a visualização. Você pode definir cores, habilitar ou desabilitar a numeração de linhas, configurar o comportamento de quebra de palavras e muito mais.
+
+Exemplo de uso com opções:
+
+`less -R -N arquivo.txt`
+
+Isso abre "arquivo.txt" com numeração de linhas (-N) e com cores de saída (-R) habilitadas.
+
+O comando `less` é uma ferramenta valiosa para a visualização e navegação eficiente de arquivos de texto no ambiente de linha de comando. Ele oferece uma interface interativa que facilita a leitura e pesquisa em documentos extensos e é amplamente utilizado por administradores de sistemas, desenvolvedores e usuários que precisam examinar e analisar conteúdo de texto diretamente no terminal. É uma ferramenta essencial para tarefas de leitura e análise de documentos e logs no Linux e sistemas Unix-like.

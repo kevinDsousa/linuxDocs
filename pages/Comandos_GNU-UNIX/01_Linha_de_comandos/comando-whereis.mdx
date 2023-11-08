@@ -1,0 +1,57 @@
+# whereis
+
+O comando `whereis` é uma ferramenta de linha de comando usada em sistemas Unix e Unix-like, incluindo o Linux, para localizar e exibir informações sobre a localização de arquivos relacionados a comandos, bibliotecas e manuais. O `whereis` é útil para determinar a localização dos executáveis de comandos, páginas de manual e arquivos de cabeçalho das bibliotecas em seu sistema.
+
+A sintaxe básica do comando `whereis` é a seguinte:
+
+`whereis nome_do_comando_ou_arquivo`
+
+Aqui estão as principais funcionalidades e usos do `whereis`:
+
+## Localização de Executáveis de Comandos:
+
+O `whereis` é comumente usado para localizar os arquivos executáveis de comandos. Isso é útil quando você deseja saber onde um comando específico está localizado em seu sistema.
+
+Exemplo:
+
+`whereis ls`
+
+Isso retornará a localização dos arquivos executáveis relacionados ao comando "ls".
+
+Localização de Páginas de Manual:
+O `whereis` também pode ser usado para localizar as páginas de manual relacionadas a um comando. Isso é útil quando você deseja acessar a documentação completa de um comando.
+
+Exemplo:
+
+`whereis man`
+
+Isso retornará a localização das páginas de manual do comando "man".
+
+## Localização de Arquivos de Cabeçalho de Bibliotecas:
+
+Para desenvolvedores, o `whereis` é útil para localizar arquivos de cabeçalho de bibliotecas. Isso é necessário para compilar programas que usam bibliotecas específicas.
+
+Exemplo:
+
+`whereis stdio.h`
+
+Isso retornará a localização do arquivo de cabeçalho "stdio.h".
+
+Pesquisa por Vários Arquivos:
+O `whereis` pode ser usado para pesquisar a localização de vários arquivos ao mesmo tempo, separados por espaços. Isso é útil para localizar vários comandos ou arquivos relacionados de uma vez.
+
+Exemplo:
+
+`whereis ls man gcc`
+
+## Opções Adicionais:
+
+O `whereis` possui opções adicionais, como **-b** (apenas comandos binários), **-m** (apenas páginas de manual) e **-s** (apenas fontes). Essas opções permitem restringir a pesquisa a um tipo específico de arquivo.
+
+Exemplo:
+
+`whereis -m man`
+
+Isso retornará apenas as localizações das páginas de manual do comando "man".
+
+O comando `whereis` é útil para localizar rapidamente a localização de comandos, páginas de manual e arquivos de cabeçalho de bibliotecas em sistemas Unix e Unix-like. É uma ferramenta eficaz para administradores de sistemas, desenvolvedores e usuários que precisam encontrar a localização de recursos do sistema ou bibliotecas em seus sistemas e para compreender melhor como os comandos são organizados em um ambiente Unix.

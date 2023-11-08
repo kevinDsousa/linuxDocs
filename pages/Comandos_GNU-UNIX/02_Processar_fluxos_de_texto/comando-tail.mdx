@@ -1,0 +1,38 @@
+# Comando Tail
+
+O comando `tail` é uma ferramenta de linha de comando encontrada em sistemas Unix e Unix-like, como o Linux, que é usada para exibir as últimas linhas de um arquivo de texto. Ao contrário do comando head, que exibe as primeiras linhas, o tail é usado para visualizar o final de um arquivo, o que pode ser útil em várias situações. Abaixo estão alguns aspectos importantes sobre o comando `tail`:
+
+Sintaxe básica:
+
+`tail [OPÇÕES] [ARQUIVOS]`
+
+## Principais opções do comando tail:
+
+- `-n ou --lines`: Essa opção permite especificar o número de linhas a serem exibidas a partir do final do arquivo. Por exemplo, tail -n 10 arquivo.txt exibirá as últimas 10 linhas do arquivo "arquivo.txt".
+
+- `-c ou --bytes`: Semelhante à opção -c do comando head, essa opção permite especificar o número de bytes a serem exibidos a partir do final do arquivo. Por exemplo, tail -c 100 arquivo.txt exibirá os últimos 100 bytes do arquivo.
+
+- `-f ou --follow`: A opção -f é usada para "seguir" o arquivo em tempo real. Isso é útil para monitorar arquivos de log em tempo real. O tail -f arquivo.log atualizará automaticamente as novas linhas adicionadas ao arquivo à medida que são escritas.
+
+- `-q ou --quiet, --silent`: Da mesma forma que o comando head, essa opção faz com que o tail não imprima nomes de arquivo ao exibir as últimas linhas de vários arquivos.
+
+## Exemplos de uso do comando tail:
+
+- Para exibir as últimas 10 linhas de um arquivo chamado "registro.log":
+
+`tail -n 10 registro.log`
+
+- Para mostrar os últimos 200 bytes de um arquivo chamado "dados.bin":
+
+`tail -c 200 dados.bin`
+
+- Para seguir um arquivo de log em tempo real e exibir novas linhas à medida que são adicionadas:
+
+`tail -f arquivo.log`
+
+- Para exibir as últimas 5 linhas de vários arquivos em um diretório sem imprimir os nomes dos arquivos:
+
+`tail -q -n 5 *`
+
+O comando `tail` é frequentemente usado em conjunto com outros comandos ou em scripts para análise de logs, monitoramento de arquivos em tempo real e extração de informações das partes finais de arquivos de registro. Ele é uma ferramenta versátil e valiosa para administradores de sistemas e desenvolvedores que precisam verificar rapidamente o conteúdo mais recente de arquivos de texto.
+

@@ -1,0 +1,51 @@
+# Comando Cat
+
+O comando `cat`, que é uma abreviação de "concatenate" (concatenar), é uma ferramenta de linha de comando em sistemas Unix e Unix-like, incluindo o Linux. Sua principal finalidade é exibir, criar, concatenar e combinar arquivos de texto. O `cat` é uma ferramenta versátil e amplamente usada, sendo uma das ferramentas mais básicas e essenciais disponíveis no ambiente de linha de comando.
+
+A sintaxe básica do comando `cat` é a seguinte:
+
+`cat [OPÇÕES] ARQUIVO(S)`
+
+Aqui estão as principais funcionalidades e usos do comando `cat`:
+
+## Exibição de Conteúdo de Arquivos:
+
+O uso mais comum do `cat` é exibir o conteúdo de um ou mais arquivos de texto no terminal. Quando você executa o comando sem opções, ele simplesmente imprime o conteúdo dos arquivos na saída padrão (normalmente a tela).
+
+Exemplo:
+
+`cat arquivo.txt`
+
+Isso exibirá o conteúdo do arquivo "arquivo.txt" no terminal.
+
+## Concatenação de Arquivos:
+
+O `cat` é usado para concatenar arquivos, ou seja, combinar o conteúdo de vários arquivos em um único arquivo. Isso é útil para juntar o conteúdo de múltiplos arquivos de texto em um único arquivo.
+
+Exemplo:
+
+`cat arquivo1.txt arquivo2.txt > arquivo_combinado.txt`
+
+Isso permite que você insira texto no novo arquivo e pressione Ctrl+D para encerrar a entrada.
+
+## Exibição com Numeração de Linhas:
+
+O `cat` pode ser combinado com o comando nl para exibir o conteúdo de um arquivo com numeração de linhas.
+
+Exemplo:
+
+`cat arquivo.txt | nl`
+
+Isso exibirá o conteúdo de "arquivo.txt" com números de linha.
+
+## Concatenação de Múltiplos Arquivos em Saída Padrão:
+
+Você pode usar o `cat` para combinar o conteúdo de vários arquivos e exibi-lo na saída padrão.
+
+Exemplo:
+
+`cat arquivo1.txt arquivo2.txt arquivo3.txt`
+
+Isso exibirá o conteúdo dos três arquivos consecutivamente na saída padrão.
+
+O comando `cat` é uma ferramenta fundamental na manipulação de arquivos de texto em sistemas Unix e Unix-like. É útil para exibir, criar, combinar e manipular conteúdo de arquivos de texto de várias maneiras. Sua simplicidade e versatilidade o tornam uma escolha comum para tarefas básicas de processamento de texto em ambientes de linha de comando.

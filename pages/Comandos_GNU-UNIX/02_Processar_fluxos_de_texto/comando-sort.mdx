@@ -1,0 +1,74 @@
+# Comando Sort
+
+O comando `sort` é uma ferramenta de linha de comando amplamente usada em sistemas Unix e Unix-like, incluindo o Linux, para classificar linhas de texto em ordem alfabética ou numérica. O `sort` é uma ferramenta poderosa que é frequentemente usada para organizar, filtrar e manipular dados em arquivos de texto.
+
+A sintaxe básica do comando `sort` é a seguinte:
+
+`sort [OPÇÕES] ARQUIVO`
+
+Aqui estão as principais funcionalidades e usos do comando `sort`:
+
+## Classificação Alfabética Padrão:
+
+Quando você executa o `sort` sem opções, ele classifica as linhas de texto em ordem alfabética. Isso é útil para organizar dados de texto em ordem alfabética crescente.
+
+Exemplo:
+
+`sort arquivo.txt`
+
+Isso classificará as linhas do arquivo "arquivo.txt" em ordem alfabética.
+
+Classificação Numérica:
+O sort pode ser usado com a opção `-n `para realizar uma classificação numérica. Isso é útil quando você deseja classificar números em vez de texto.
+
+Exemplo:
+
+`sort -n numeros.txt`
+
+Isso classificará as linhas do arquivo "numeros.txt" em ordem numérica.
+
+## Classificação Reversa:
+
+A opção `-r` do sort permite classificar as linhas em ordem reversa, ou seja, em ordem decrescente.
+
+Exemplo:
+
+`sort -r arquivo.txt`
+
+Isso classificará as linhas de "arquivo.txt" em ordem alfabética reversa.
+
+## Classificação de Campos Personalizada:
+
+O `sort` permite que você especifique campos e caracteres delimitadores para classificar com base em colunas específicas.
+
+Exemplo:
+
+`sort -t':' -k2,2 arquivo.csv`
+
+Isso classificará o arquivo CSV "arquivo.csv" com base no segundo campo (usando : como delimitador).
+
+## Remoção de Linhas Duplicadas:
+
+O `sort` também é usado para remover linhas duplicadas de um arquivo de texto. Isso é feito usando a opção `-u`.
+
+Exemplo:
+
+`sort -u arquivo.txt`
+
+Isso exibirá apenas uma instância de cada linha única do arquivo.
+
+## Encadeamento com Outros Comandos:
+
+O `sort` pode ser encadeado com outros comandos usando tubulações (pipes) para realizar tarefas mais complexas, como filtrar dados e, em seguida, classificá-los.
+
+Exemplo:
+
+`cat arquivo.txt | grep "palavra" | sort`
+
+Isso exibe as linhas que contêm a palavra "palavra" e as classifica em ordem alfabética.
+
+O comando `sort` é uma ferramenta essencial para ordenar, classificar e manipular dados em arquivos de texto no ambiente de linha de comando do Linux e sistemas Unix-like. Ele é amplamente utilizado em tarefas de processamento de dados, análise de registros, organização de listas e muito mais. A capacidade de classificar dados é crucial para a análise e o gerenciamento de informações em sistemas Unix.
+
+
+
+

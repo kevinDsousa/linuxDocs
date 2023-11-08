@@ -1,0 +1,82 @@
+# Executando Múltiplos Comandos em uma Única Linha com Ponto e Vírgula
+
+No mundo da linha de comando, muitas vezes é necessário realizar várias tarefas em sequência, executando diferentes comandos um após o outro. Para isso, podemos usar o ponto e vírgula (;) como um delimitador que permite encadear comandos em uma única linha.
+
+Sintaxe
+`comando1 ; comando2 ; comando3 ; ...`
+
+Cada comando é separado pelo ponto e vírgula e será executado em ordem, independentemente de o comando anterior ter tido sucesso ou falhado. Isso é útil quando você precisa realizar várias operações em série, sem depender do resultado de comandos anteriores.
+
+## Exemplo Prático:
+
+Suponha que você deseje realizar três ações diferentes no seu sistema Linux:
+
+Exibir informações sobre a CPU.
+Listar o conteúdo do diretório /boot.
+Exibir informações sobre as partições montadas.
+
+Você pode realizar essas tarefas usando o comando `cat`, `ls`, e `mount`, respectivamente. Ao usar o ponto e vírgula, você pode executar esses comandos em sequência da seguinte forma:
+
+`cat /proc/cpuinfo ; ls /boot ; mount`
+
+<CH.Spotlight>
+
+```bash terminal.sh
+cat /proc/cpuinfo ; ls /boot ; mount
+```
+
+---
+
+Uso do cat para mostrar cpuinfo
+
+```bash terminal.sh focus=1[1:17]
+cat /proc/cpuinfo ; ls /boot ; mount
+```
+
+---
+
+listar o conteúdo de boot
+
+```bash terminal.sh focus=1[21:29]
+cat /proc/cpuinfo ; ls /boot ; mount
+```
+
+---
+
+Uso do mount para mostrar sobre partições
+
+```bash terminal.sh focus=1[31:36]
+cat /proc/cpuinfo ; ls /boot ; mount
+```
+
+---
+
+Exemplo de saída do comando
+
+```bash terminal.sh
+processor   : 0
+vendor_id   : GenuineIntel
+cpu family  : 6
+model       : 94
+model name  : Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz
+stepping    : 3
+microcode   : 0xe2
+...
+
+abi-4.15.0-151-generic     memtest86+.bin  System.map-4.15.0-151-generic
+abi-4.15.0-153-generic     config-4.15.0-151-generic  System.map-4.15.0-153-generic
+abi-4.15.0-154-generic     config-4.15.0-153-generic  System.map-4.15.0-154-generic
+...
+
+/dev/sda1 on / type ext4 (rw,relatime,errors=remount-ro)
+tmpfs on /run type tmpfs (rw,nosuid,noexec,relatime,size=4058724k,mode=755)
+...
+```
+
+---
+
+</CH.Spotlight>
+
+Neste exemplo, os três comandos são executados em ordem. Primeiro, o comando cat /proc/cpuinfo exibe informações sobre a CPU. Em seguida, o comando ls /boot lista o conteúdo do diretório /boot, e, por fim, o comando mount exibe informações sobre as partições montadas.
+
+É importante lembrar que, ao utilizar o ponto e vírgula, os comandos são executados de forma sequencial, independentemente de o comando anterior ter tido êxito ou falhado. Portanto, você deve ter cuidado ao usá-lo para garantir que os comandos subsequentes não dependam de resultados específicos dos comandos anteriores.

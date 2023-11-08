@@ -1,0 +1,73 @@
+# Comando Set
+
+O comando set é um comando de controle de ambiente amplamente usado em shells Unix, como o Bash. Ele é usado para exibir, configurar e manipular variáveis de ambiente, além de controlar o comportamento do shell. O set é uma ferramenta versátil que oferece várias funcionalidades úteis para administradores de sistema e usuários avançados.
+
+Aqui estão as principais funcionalidades e usos do comando set:
+
+## Exibição de Variáveis de Ambiente:
+
+Ao usar o `set` sem argumentos, ele exibirá uma lista de todas as variáveis de ambiente e valores associados. Isso inclui variáveis globais, locais e aquelas definidas pelo usuário. Pode ser uma lista extensa, por isso geralmente é usado com redirecionamento de saída para analisar ou pesquisar informações específicas.
+
+Exemplo:
+
+`set`
+
+## Definição de Variáveis Locais:
+
+Você pode usar o `set` para definir variáveis locais no shell. Essas variáveis são visíveis apenas no contexto atual do shell e não são compartilhadas com outros processos ou subshells.
+
+Exemplo:
+
+`set MINHA_VAR_LOCAL=123`
+
+## Ativação/Desativação de Opções do Shell:
+
+O `set` pode ser usado para ativar ou desativar opções específicas do shell, alterando seu comportamento. Isso pode ser útil para personalizar a forma como o shell interage com comandos e scripts.
+
+Exemplo (ativando opção para exibir comandos antes da execução):
+
+`set -x`
+
+## Definição de Argumentos Posicionais:
+
+O `set` permite definir argumentos posicionais, que são valores que podem ser acessados em scripts ou em um shell interativo usando variáveis como `$1`, `$2`, etc.
+
+Exemplo:
+
+`set arg1 arg2 arg3`
+
+Agora, você pode acessar esses argumentos como $1, $2, e $3.
+
+## Modificação de Opções do Shell:
+
+O `set` também pode ser usado para modificar as opções do shell, como o comportamento de expansão de variáveis, manipulação de erros e muito mais.
+
+Exemplo (desativando a expansão de variáveis não definidas):
+
+`set +u`
+
+## Reconfiguração do IFS (Internal Field Separator):
+
+O `set` pode ser usado para reconfigurar o IFS, que é um conjunto de caracteres que separa palavras em uma linha de comando. Isso é útil quando você precisa personalizar a forma como o shell divide argumentos.
+
+Exemplo:
+
+`set IFS=:`
+
+## Redirecionamento de Saída e Erros:
+
+O `set` pode ser usado em conjunto com redirecionamento de saída para salvar informações do ambiente ou saída do comando em um arquivo de texto.
+
+Exemplo:
+
+`set > ambiente.txt`
+
+## Restauração de Opções do Shell:
+
+Você pode usar o `set` para restaurar as opções do shell aos valores padrão. Isso pode ser útil quando você deseja retornar a um comportamento original do shell após fazer modificações temporárias.
+
+Exemplo (restaurando todas as opções do shell para os valores padrão):
+
+`set +o`
+
+Em resumo, o comando `set` é uma ferramenta versátil que oferece controle sobre variáveis de ambiente, opções do shell e comportamento do shell. Ele é usado para personalizar a experiência do usuário e configurar o ambiente do shell de acordo com as necessidades específicas do usuário ou do sistema. O set é uma parte fundamental da caixa de ferramentas do administrador de sistema e de qualquer usuário avançado que trabalhe em ambientes Unix.

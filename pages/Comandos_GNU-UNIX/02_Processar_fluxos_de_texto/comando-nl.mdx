@@ -1,0 +1,61 @@
+# Comando NL
+
+O comando `nl` é uma ferramenta de linha de comando em sistemas Unix e Unix-like, incluindo o Linux, que é utilizada para numerar linhas em arquivos de texto. A principal finalidade do `nl` é adicionar números de linha a um arquivo de texto para facilitar a referência a linhas específicas, identificação de erros ou outras tarefas em que a numeração de linhas seja útil.
+
+A sintaxe básica do comando `nl` é a seguinte:
+
+`nl [OPÇÕES] ARQUIVO`
+
+Aqui estão as principais funcionalidades e usos do comando `nl`:
+
+## Numeração de Linhas:
+
+O `nl` é usado para adicionar números de linha a um arquivo de texto. Quando você executa o comando, ele gera uma versão do arquivo original com os números de linha antes de cada linha de texto.
+
+Exemplo:
+
+`nl arquivo.txt`
+
+Isso gerará uma versão do arquivo "arquivo.txt" com números de linha.
+
+## Controle da Formatação:
+
+O `nl` oferece controle sobre a formatação da saída, permitindo que você especifique como os números de linha são formatados, incluindo a largura dos números, o preenchimento com zeros e a posição dos números de linha na saída.
+
+Exemplo:
+
+`nl -w3 -s': ' arquivo.txt`
+
+Isso configura o `nl` para usar números de linha com largura 3, separados por dois pontos e espaço.
+
+## Supressão de Linhas em Branco:
+
+O `nl` pode ser usado com a opção `-b` para suprimir a numeração de linhas em branco, permitindo que você adicione números apenas a linhas de texto significativas.
+
+Exemplo:
+
+`nl -b t arquivo.txt`
+
+Isso numera apenas as linhas não em branco.
+
+## Seleção de Linhas para Numeração:
+
+Você pode usar o `nl` com a opção `-v` para especificar quais linhas devem ser numeradas com base em um padrão de pesquisa. Isso é útil quando você deseja numerar apenas linhas que correspondem a determinados critérios.
+
+Exemplo:
+
+`nl -v 10 arquivo.txt`
+
+Isso inicia a numeração a partir da linha 10 do arquivo.
+
+## Encadeamento com Outros Comandos:
+
+O `nl` pode ser encadeado com outros comandos usando tubulações (pipes) para realizar tarefas mais complexas, como filtrar linhas e, em seguida, numerá-las.
+
+Exemplo:
+
+`cat arquivo.txt | grep "palavra" | nl`
+
+Isso exibe apenas as linhas que contêm a palavra "palavra" e as numera.
+
+O comando `nl` é uma ferramenta útil para adicionar números de linha a arquivos de texto, o que facilita a referência a linhas específicas e a análise de documentos. Ele é comumente usado para examinar registros, logs e arquivos de código-fonte, onde a numeração de linhas ajuda a identificar problemas ou referenciar partes específicas do arquivo. É uma ferramenta essencial para tarefas que envolvem análise de texto no ambiente de linha de comando do Linux e sistemas Unix-like.

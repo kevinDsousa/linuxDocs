@@ -1,0 +1,41 @@
+# Comando Split
+
+O comando `split` é uma ferramenta de linha de comando encontrada em sistemas Unix e Unix-like, como o Linux. Sua principal finalidade é dividir um arquivo grande em partes menores. O `split` é útil quando você precisa segmentar um arquivo grande para facilitar o compartilhamento, a transferência ou o processamento de pedaços menores. Aqui estão algumas informações importantes sobre o comando split:
+
+Sintaxe básica:
+
+`split [OPÇÕES] ARQUIVO PREFIXO`
+
+ARQUIVO: O nome do arquivo que você deseja dividir em partes menores.
+
+PREFIXO: Um prefixo que será usado para nomear os arquivos de saída. O split adicionará letras (a, b, c, etc.) ao prefixo para identificar as partes resultantes.
+
+## Principais opções do comando split:
+
+- `-b BYTES ou --bytes=BYTES`: 
+
+Essa opção permite especificar o tamanho máximo de cada parte em bytes. Por exemplo, para dividir um arquivo em partes de 1 MB (1.000.000 bytes), você pode usar -b 1M.
+
+- `-l LINHAS ou --lines=LINHAS`: 
+
+Com essa opção, você pode especificar o número máximo de linhas em cada parte. Isso é útil quando você deseja dividir um arquivo por um número específico de linhas, independentemente do tamanho em bytes.
+
+- `-a SUFFIX_LENGTH ou --suffix-length=SUFFIX_LENGTH`: 
+
+Isso permite especificar o tamanho do sufixo que será adicionado aos arquivos de saída para identificá-los. O tamanho padrão é 2, mas você pode escolher um valor diferente.
+
+## Exemplos de uso do comando split:
+
+- Para dividir um arquivo chamado "arquivo_grande.txt" em partes de 10 MB e nomeá-las com o prefixo "parte_":
+
+`split -b 10M arquivo_grande.txt parte_`
+
+- Para dividir um arquivo chamado "dados.txt" em partes de 100 linhas e nomeá-las com o prefixo "parte_":
+
+`split -l 100 dados.txt parte_`
+
+- Para dividir um arquivo em partes de tamanho fixo e nomeá-las com um sufixo maior (por exemplo, três caracteres):
+
+`split -b 1M -a 3 arquivo_grande.txt parte_`
+
+O comando split é uma ferramenta simples e eficaz para dividir arquivos grandes em partes menores. É útil em cenários em que você precisa lidar com limitações de tamanho de arquivo ou quando deseja segmentar dados para processamento ou armazenamento mais eficiente. Depois de dividir o arquivo, você pode trabalhar com as partes individualmente e, se necessário, reuni-las usando o comando cat ou outras técnicas de combinação de arquivos.

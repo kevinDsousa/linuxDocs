@@ -1,0 +1,48 @@
+# Comando Uniq
+
+O comando `uniq` é uma ferramenta de linha de comando em sistemas Unix e Unix-like, como o Linux, que é usada para lidar com linhas duplicadas em arquivos de texto. O nome "uniq" é uma abreviação de "unique" (único), refletindo seu propósito principal, que é identificar e remover linhas duplicadas de um arquivo de texto. Abaixo estão alguns aspectos importantes sobre o comando uniq:
+
+Sintaxe básica:
+
+`uniq [OPÇÕES] [ARQUIVO]`
+
+## Principais opções do comando uniq
+
+- `-d ou --repeated`: 
+
+Essa opção permite que o uniq exiba apenas as linhas que são duplicatas. Em outras palavras, ele exibirá apenas as linhas que ocorrem mais de uma vez no arquivo.
+
+- `-i ou --ignore-case`: 
+
+Com essa opção, o uniq fará a comparação de linhas sem diferenciação entre maiúsculas e minúsculas. Isso significa que "linha" e "Linha" serão tratadas como iguais.
+
+- `-u ou --unique`: 
+
+O uniq com a opção -u exibirá apenas as linhas que não têm duplicatas. Ele mostrará apenas as linhas únicas no arquivo.
+
+- `-c ou --count`: 
+
+Esta opção faz com que o uniq pré-fixe cada linha com um contador que indica quantas vezes essa linha ocorre no arquivo.
+
+- `-f N ou --skip-fields=N`:
+Essa opção permite que o uniq ignore os primeiros N campos (colunas) de cada linha ao realizar a comparação. Isso pode ser útil quando você deseja ignorar colunas iniciais que não afetam a identificação de duplicatas.
+
+## Exemplos de uso do comando uniq
+
+Para exibir apenas as linhas duplicadas em um arquivo chamado "dados.txt":
+
+- `uniq -d dados.txt`
+
+Para exibir apenas as linhas únicas (não duplicadas) em um arquivo chamado "nomes.txt":
+
+- `uniq -u nomes.txt`
+
+Para contar o número de ocorrências de cada linha em um arquivo chamado "registro.log" e mostrar o resultado:
+
+- `uniq -c registro.log`
+
+Para ignorar os dois primeiros campos (colunas) e exibir as linhas únicas em um arquivo chamado "dados.csv":
+
+- `uniq -f 2 dados.csv`
+
+O comando `uniq` é frequentemente usado para simplificar arquivos de registro, remover duplicatas de listas ou tabelas e realizar tarefas relacionadas à deduplicação de dados. É uma ferramenta útil para limpeza e análise de dados em arquivos de texto.

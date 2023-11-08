@@ -1,0 +1,85 @@
+# Comandos de Histórico
+No ambiente do terminal, existe um recurso útil que armazena todos os comandos digitados, facilitando o reuso de comandos anteriores por meio das teclas de seta para cima (↑) ou para baixo (↓). Todos esses comandos são armazenados em um arquivo localizado no perfil do usuário em /root ou em outro diretório dependendo do perfil de usuário.
+
+Comandos Relacionados ao Histórico:
+history: Este comando exibe uma lista numerada de comandos previamente usados, que são armazenados no arquivo de histórico do bash. Isso permite que você veja os comandos usados recentemente e ajuda a lembrar comandos específicos.
+
+Aqui está um exemplo:
+
+<CH.Spotlight>
+
+```bash terminal.sh
+history
+```
+
+---
+
+Usando history sem parametro
+
+```bash terminal.sh
+history
+```
+
+---
+
+Retorno do comando
+
+```bash terminal.sh
+1  ls
+2  cd /var/www
+3  nano index.html
+4  cp file.txt backup/
+5  history
+```
+
+---
+
+</CH.Spotlight>
+
+`!11`: Este comando executa o comando na linha **11** do arquivo de histórico. Substitua 11 pelo número da linha correspondente ao comando que deseja executar. Isso é útil para reexecutar rapidamente comandos específicos sem precisar digitá-los novamente.
+
+<CH.Spotlight>
+
+```bash terminal.sh
+history
+```
+
+---
+
+Usando history sem parametro
+
+```bash terminal.sh
+history !3
+```
+
+---
+
+Retorno do comando
+
+```bash terminal.sh
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+```
+
+---
+
+</CH.Spotlight>
+
+`!i`: Este comando executa o último comando que começa com a letra `i` no histórico. Você pode substituir `i` por qualquer outra letra para executar o último comando que começa com essa letra.
+
+`history -c`: Este comando limpa o histórico de comandos, removendo todos os registros armazenados. Isso pode ser útil quando você precisa limpar o histórico por motivos de privacidade ou para evitar que determinados comandos sejam reutilizados.
+
+Esses comandos relacionados ao histórico podem agilizar o fluxo de trabalho no terminal, permitindo o reuso rápido e eficiente de comandos anteriores. No entanto, é importante lembrar que o histórico pode conter informações sensíveis, então a limpeza regular do histórico pode ser necessária por motivos de segurança.
+
+
+
+

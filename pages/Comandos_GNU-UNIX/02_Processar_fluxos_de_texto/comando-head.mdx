@@ -1,0 +1,42 @@
+# Comando Head
+
+O comando head é uma ferramenta de linha de comando usada em sistemas Unix e Unix-like, como o Linux, para exibir as primeiras linhas de um arquivo de texto. É uma ferramenta útil para visualizar o conteúdo de um arquivo de texto sem a necessidade de abrir todo o arquivo. O head é frequentemente usado em combinação com outros comandos ou em scripts de shell para análise e manipulação de dados. Aqui estão alguns aspectos importantes sobre o comando head:
+
+Sintaxe básica:
+
+`head [OPÇÕES] [ARQUIVOS]`
+
+## Principais opções do comando head:
+
+`-n ou --lines`
+
+Essa opção permite especificar o número de linhas que você deseja exibir a partir do início do arquivo. Por exemplo, head -n 10 arquivo.txt exibirá as 10 primeiras linhas do arquivo "arquivo.txt".
+
+`-c ou --bytes`
+
+Em vez de especificar o número de linhas, você pode usar esta opção para exibir os primeiros bytes do arquivo. Por exemplo, head -c 100 arquivo.txt exibirá os primeiros 100 bytes do arquivo.
+
+`-q ou --quiet, --silent`
+
+Essa opção faz com que o head não imprima nomes de arquivo ao exibir as primeiras linhas de vários arquivos. É útil quando você está processando vários arquivos e deseja resultados mais limpos.
+
+## Exemplos de uso do comando head:
+
+- Para exibir as 10 primeiras linhas de um arquivo chamado "exemplo.txt":
+
+`head -n 10 exemplo.txt`
+
+- Para mostrar os primeiros 100 bytes de um arquivo chamado "dados.bin":
+
+`head -c 100 dados.bin`
+
+- Para exibir as primeiras 20 linhas de vários arquivos em um diretório:
+
+`head -n 20 *`
+
+- Para mostrar as primeiras 5 linhas de um arquivo sem imprimir o nome do arquivo:
+
+`head -q -n 5 arquivo.txt`
+
+O comando head é útil em diversas situações, como ao visualizar os primeiros registros de arquivos de log, examinar os cabeçalhos de arquivos de texto, verificar o conteúdo inicial de arquivos de configuração e muito mais. Ele é uma ferramenta poderosa e eficaz para inspecionar rapidamente o conteúdo de arquivos sem a necessidade de carregar o arquivo inteiro.
+

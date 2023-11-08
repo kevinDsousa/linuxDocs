@@ -1,0 +1,48 @@
+# Comando Export
+
+O comando `export` é uma parte fundamental do sistema Unix e dos shells de linha de comando, como o Bash. Ele é usado para definir variáveis de ambiente que podem ser acessadas por processos e subshells, tornando-as visíveis e disponíveis em todo o ambiente do sistema operacional.
+
+A função principal do comando export é definir variáveis de ambiente ou tornar variáveis locais visíveis globalmente, de modo que outros processos ou subshells tenham acesso a essas variáveis.
+
+A sintaxe básica do comando `export` é a seguinte:
+
+`export NOME_DA_VARIÁVEL=valor`
+
+Aqui está uma explicação dos principais usos e funcionalidades do comando `export`:
+
+## Definição de Variáveis de Ambiente:
+
+Ao usar o `export`, você pode criar variáveis de ambiente que podem ser acessadas por outros processos, programas ou subshells. Isso é útil para armazenar informações globais, como configurações de sistema ou variáveis que precisam ser compartilhadas entre diferentes processos.
+
+Exemplo:
+
+`export MINHA_VARIAVEL=123`
+
+## Tornando Variáveis Locais Globais:
+
+Você também pode usar o `export` para tornar variáveis locais disponíveis globalmente, permitindo que elas sejam acessadas por outros processos ou subshells. Isso é útil quando você deseja compartilhar variáveis entre diferentes partes de um script ou entre scripts.
+
+Exemplo:
+
+```
+MINHA_VAR_LOCAL=456
+export MINHA_VAR_LOCAL
+```
+
+## Listando Variáveis de Ambiente:
+
+Para listar todas as variáveis de ambiente, você pode usar o comando env. Isso mostrará uma lista de todas as variáveis de ambiente definidas no seu sistema, incluindo aquelas definidas com o export.
+
+Exemplo:
+
+`env`
+
+## Removendo Variáveis de Ambiente:
+
+Para remover uma variável de ambiente previamente definida, você pode usar o comando unset. Isso tornará a variável indisponível para outros processos e subshells.
+
+Exemplo:
+
+`unset MINHA_VARIAVEL`
+
+O comando export desempenha um papel importante na configuração e na interação de variáveis de ambiente em sistemas Unix. Ele é usado para compartilhar informações entre diferentes partes do sistema, processos e scripts, tornando possível o compartilhamento de configurações, valores e dados essenciais em todo o ambiente do sistema operacional. Isso é particularmente útil em ambientes de desenvolvimento, automação e configuração de sistemas.

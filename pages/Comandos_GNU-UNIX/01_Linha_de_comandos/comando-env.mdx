@@ -1,0 +1,52 @@
+# Comando env
+
+Comando env é uma ferramenta de linha de comando usada para exibir variáveis de ambiente e executar programas com um ambiente de execução específico. É uma parte fundamental do sistema operacional que permite configurar e controlar variáveis de ambiente para processos e comandos.
+
+Aqui estão as principais funcionalidades e usos do comando env no contexto do Ubuntu e outros sistemas Unix-like:
+
+## Exibição de Variáveis de Ambiente:
+
+O comando `env` é frequentemente usado para listar todas as variáveis de ambiente definidas no sistema. Isso inclui variáveis como `PATH`, `HOME`, `USER`, `SHELL` e outras que afetam o comportamento do sistema.
+
+Exemplo:
+
+`env`
+
+Isso exibirá uma lista de variáveis de ambiente e seus valores correspondentes.
+
+## Execução de Programas com Variáveis de Ambiente Específicas:
+
+O `env` é frequentemente usado para executar programas com um conjunto específico de variáveis de ambiente. Isso é útil quando você deseja definir temporariamente variáveis de ambiente para um comando específico sem afetar o ambiente global do sistema.
+
+Exemplo:
+
+`env VARIAVEL=valor programa`
+
+Isso executará o programa com a variável de ambiente VARIAVEL definida como `valor`.
+
+## Alteração do Caminho (PATH):
+
+No Ubuntu e em outros sistemas Unix, o `env` é comumente usado para alterar o caminho de busca de executáveis. Isso permite que você execute versões específicas de programas ou utilize diretórios personalizados para executáveis temporariamente.
+
+Exemplo:
+
+`env PATH=/caminho/customizado:$PATH meu_programa`
+
+Isso alterará temporariamente o caminho para incluir /caminho/customizado ao executar `meu_programa`.
+
+## Definição de Variáveis de Ambiente para Scripts e Programas:
+
+O `env` pode ser usado em scripts e arquivos de inicialização para definir variáveis de ambiente antes de executar comandos. Isso é útil para garantir que os scripts tenham as variáveis de ambiente corretas para funcionar adequadamente.
+
+Exemplo em um script:
+
+```
+#!/bin/bash
+env VARIAVEL=valor meu_script.sh
+```
+
+## Outros Usos:
+
+O `env` pode ser usado em várias outras situações onde a configuração de variáveis de ambiente específicas é necessária. Por exemplo, ao executar programas que requerem variáveis de ambiente específicas para autenticação, ou ao executar comandos em contêineres ou ambientes de desenvolvimento isolados.
+
+Em resumo, o comando `env` é uma ferramenta versátil que desempenha um papel importante na configuração de variáveis de ambiente e na execução de programas com ambientes específicos no Ubuntu e em outros sistemas Unix-like. Ele oferece flexibilidade e controle sobre o ambiente de execução e é amplamente utilizado em scripts, automatização e gerenciamento de sistemas.

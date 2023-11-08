@@ -1,0 +1,88 @@
+# Variavéis especiais
+
+Variáveis especiais, também conhecidas como variáveis internas, são variáveis predefinidas e controladas pelo próprio shell (como o Bash em sistemas Unix-like) ou pelo sistema operacional. Elas têm um propósito específico e são usadas para fornecer informações sobre o ambiente do sistema ou para controlar o comportamento do shell. Essas variáveis são frequentemente usadas em scripts, automação e interação com o sistema.
+
+Aqui estão algumas das variáveis especiais mais comuns e suas funções:
+
+## $? (Variável de Saída):
+
+Armazena o código de retorno do último comando executado. Um valor de 0 geralmente indica sucesso, enquanto valores diferentes de 0 indicam erros ou falhas. Isso é útil para verificação de erros em scripts.
+
+Exemplo:
+
+```
+meu_comando
+if [ $? -eq 0 ]; then
+    echo "O comando foi bem-sucedido."
+else
+    echo "O comando falhou."
+fi
+```
+
+## $$ (ID de Processo Atual):
+
+Armazena o ID do processo atual do shell. Isso pode ser útil ao criar nomes de arquivos temporários exclusivos.
+
+Exemplo:
+
+`nome_arquivo_temporario="tempfile_$$"`
+
+## $# (Número de Argumentos):
+
+Armazena o número de argumentos passados para um script ou comando. Isso é útil para determinar quantos argumentos foram fornecidos.
+
+Exemplo:
+
+```
+if [ $# -eq 2 ]; then
+    echo "Foram fornecidos dois argumentos."
+fi
+```
+
+## $* e $@ (Todos os Argumentos):
+
+Armazenam todos os argumentos passados para um script ou comando. A diferença entre eles é a forma como os argumentos são tratados.
+
+$* trata todos os argumentos como uma única string, separada por espaços.
+$@ trata cada argumento como uma string separada.
+Exemplo:
+
+```
+for arg in "$@"; do
+    echo "Argumento: $arg"
+done
+```
+
+## $0 (Nome do Comando ou Script):
+
+Armazena o nome do comando ou script que está sendo executado. Isso é útil para determinar o próprio nome do script em execução.
+
+Exemplo:
+
+`echo "Este é o script $0."`
+
+## $! (ID do Último Processo em Segundo Plano):
+
+Armazena o ID do último processo executado em segundo plano. Isso é útil quando você precisa controlar ou monitorar processos em segundo plano.
+
+Exemplo:
+
+```
+meu_comando_em_segundo_plano &
+echo "ID do processo em segundo plano: $!"
+```
+
+## $IFS (Separador de Campo Interno):
+
+Define o caractere ou sequência de caracteres que separa campos em uma linha de comando. O valor padrão é espaço em branco, tabulação e nova linha.
+
+Exemplo:
+
+```
+IFS=","
+echo "Valor 1,Valor 2,Valor 3" | while read campo; do
+    echo "Campo: $campo"
+done
+```
+
+Essas variáveis especiais são parte integrante da programação e automação em ambientes Unix-like e são amplamente usadas em scripts e na interação com o sistema. Elas fornecem informações essenciais sobre o estado do sistema e permitem que os desenvolvedores controlem o comportamento de seus scripts de maneira eficaz. É importante entender essas variáveis e saber como usá-las para criar scripts e comandos mais robustos e flexíveis.

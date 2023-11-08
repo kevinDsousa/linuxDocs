@@ -1,0 +1,65 @@
+# OR lógico
+
+O operador lógico "OR" é representado pelo símbolo || e executa o segundo comando apenas se o primeiro falhar.
+
+Aqui está um exemplo:
+`ls /pro || cat /etc/passwd`
+
+Neste caso, como há um erro de digitação na palavra "pro" no primeiro comando, o primeiro comando não é realizado e o segundo comando é executado.
+
+<CH.Spotlight>
+
+```bash terminal.sh
+ls /pro || cat /etc/passwd
+```
+
+---
+
+Criando um fluxo usando || 
+
+```bash terminal.sh
+ls /pro || cat /etc/passwd
+```
+
+---
+
+Ls para listar o conteúdo de /proc
+
+```bash terminal.sh focus=1[1:7]
+ls /pro || cat /etc/passwd
+```
+
+---
+
+Usando || para condição logica
+
+```bash terminal.sh focus=1[8:10]
+ls /pro || cat /etc/passwd
+```
+
+---
+
+Uso do comando cat para mostrar o passwd
+
+```bash terminal.sh focus=1[12:26]
+ls /pro || cat /etc/passwd
+```
+
+---
+
+Exemplo de saída do comando
+
+```bash terminal.sh
+ls: cannot access '/pro': No such file or directory
+root:x:0:0:root:/root:/bin/bash
+user1:x:1000:1000:User 1:/home/user1:/bin/bash
+user2:x:1001:1001:User 2:/home/user2:/bin/bash
+...
+
+```
+
+---
+
+</CH.Spotlight>
+
+Como não existe uma pasta /proc gera uma condição lógica para mostrar o conteúdo do segundo comando.
