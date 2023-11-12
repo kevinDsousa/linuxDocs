@@ -1,0 +1,46 @@
+# Comando Xz
+
+
+O comando `xz` é usado para compactar e descompactar arquivos usando o formato de compactação XZ. Ele é uma ferramenta versátil que oferece uma alta taxa de compressão e é comumente usada no Linux. Aqui estão algumas informações sobre o `xz`
+
+## Exemplo de Uso:
+
+- Compactar um Arquivo:
+
+`xz arquivo`
+
+Este comando compacta o arquivo arquivo, criando um novo arquivo chamado arquivo.xz.
+
+- Descompactar um Arquivo:
+
+`xz -d arquivo.xz`
+
+Este comando descompacta o arquivo arquivo.xz, criando um novo arquivo chamado arquivo.
+
+## Opções Comuns:
+
+`-k`, `--keep`: Mantém o arquivo original após a compactação ou descompactação.
+
+`-c`, `--stdout`: Escreve a saída no console em vez de criar um arquivo compactado ou descompactado. Isso é útil quando você deseja direcionar a saída para outro comando ou arquivo sem modificar os arquivos originais.
+
+## Exemplos de Opções:
+
+- Compactar e Manter o Arquivo Original:
+
+`xz -k arquivo`
+
+- Compactar e Escrever Saída no Console:
+
+`xz -c arquivo > arquivo.xz`
+
+## Cuidado:
+
+O comando `xz` modifica o arquivo original, compactando-o ou descompactando-o. Se você deseja manter os arquivos originais e criar novos arquivos compactados ou descompactados, é recomendável fazer cópias antes de usar o xz.
+
+## Dica:
+
+Assim como outros comandos de compactação, o `xz` é frequentemente usado em conjunto com o comando tar para compactar e descompactar arquivos e diretórios. Por exemplo:
+
+`tar Jcvf arquivo.tar.xz diretorio/`
+
+O `xz` oferece uma excelente taxa de compressão e é amplamente utilizado para compactar arquivos no ambiente Linux.

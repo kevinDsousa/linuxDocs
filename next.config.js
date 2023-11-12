@@ -8,4 +8,13 @@ const withNextra = require("nextra")({
   },
 })
 
-module.exports = withNextra()
+
+module.exports = {
+  target: 'experimental-serverless-trace',
+
+  exportPathMap: async function () {
+    return {
+      '/': { page: '/01_Linha_de_comandos/comando-and' },
+    };
+  },
+};

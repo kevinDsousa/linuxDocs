@@ -1,0 +1,45 @@
+# Comando File
+
+O comando `file` é uma ferramenta de linha de comando em sistemas Unix e Unix-like, como o Linux, que é usada para determinar o tipo de um arquivo. Ele examina o conteúdo do arquivo e fornece informações sobre o formato do arquivo, ajudando a identificar o tipo de arquivo, seja um arquivo de texto, uma imagem, um arquivo binário, etc.
+
+## Sintaxe Básica:
+
+`file [opções] arquivo(s)`
+
+## Exemplos de Uso:
+
+- Determinar o Tipo de um Único Arquivo:
+
+`file exemplo.txt`
+
+Saída esperada: exemplo.txt: ASCII text
+
+- Determinar o Tipo de Vários Arquivos:
+
+`file *.jpg`
+
+Saída esperada: imagem1.jpg: JPEG image data, JFIF standard 1.01
+
+- Determinar o Tipo de Todos os Arquivos em um Diretório:
+
+`file *`
+
+Saída esperada: Saída detalhada para cada arquivo no diretório.
+
+## Opções Comuns:
+
+`-b`, --brief: Fornece uma saída mais concisa, sem detalhes adicionais.
+
+`-i`, --mime-type: Mostra o tipo MIME do arquivo.
+
+`-L`, --dereference: Segue links simbólicos e exibe informações sobre o arquivo referenciado.
+
+## Observações e Dicas:
+
+O comando file usa a biblioteca de identificação de arquivos chamada "libmagic" para realizar a detecção do tipo de arquivo.
+
+Ele é útil para determinar rapidamente a natureza de um arquivo, especialmente quando a extensão do arquivo não é indicativa o suficiente.
+
+Pode ser usado em scripts e comandos de pipeline para tomar decisões com base no tipo de arquivo.
+
+A opção `-i` é útil quando se deseja obter apenas o tipo MIME do arquivo, o que pode ser útil em contextos web e de programação.

@@ -1,0 +1,33 @@
+# Comando Rmdir
+
+O comando `rmdir` é usado para remover diretórios vazios (sem arquivos ou subdiretórios). Ele é utilizado em sistemas Unix e Unix-like, incluindo o Linux. Aqui está a sintaxe básica:
+
+`rmdir [opções] diretório`
+
+## Exemplos de Uso:
+
+- Remover um Diretório Vazio:
+
+`rmdir nome_do_diretorio`
+
+Isso remove o diretório especificado se estiver vazio.
+
+- Remover Diretórios Vazios Recursivamente:
+
+`rmdir -p caminho/do/diretorio`
+
+A opção `-p` permite remover diretórios vazios recursivamente, removendo também os diretórios pais vazios.
+
+## Opções Comuns:
+
+`-p`, `--parents`: Remove diretórios vazios e seus pais, se estiverem vazios. Essa opção é útil para remover uma árvore de diretórios.
+
+## Observações e Dicas:
+
+O `rmdir` não pode ser usado para remover diretórios que contenham arquivos ou subdiretórios. Se o diretório não estiver vazio, você receberá uma mensagem de erro.
+
+Caso você precise remover um diretório não vazio, pode usar o comando rm com a opção `-r` (recursiva), mas tenha cuidado ao usá-lo, pois ele excluirá todo o conteúdo do diretório.
+
+Certifique-se de ter permissões adequadas para remover o diretório. Se você não for o proprietário do diretório, pode ser necessário usar sudo para obter permissões elevadas.
+
+Antes de usar comandos que removem diretórios, especialmente recursivamente, é uma boa prática verificar duas vezes para garantir que você está excluindo os diretórios corretos. Erros podem resultar na perda irreparável de dados.

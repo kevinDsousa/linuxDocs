@@ -1,0 +1,67 @@
+# Comando Tar
+
+O comando `tar` é usado para criar, visualizar ou extrair arquivos compactados em sistemas operacionais Unix e Unix-like, incluindo o Linux. O termo "tar" significa "tape archive", originado do uso inicial do comando para criar arquivos de fita em sistemas Unix. O `tar` é frequentemente usado em conjunto com programas de compressão, como gzip e bzip2, para criar arquivos compactados. Aqui está a sintaxe básica do 
+
+## Comando:
+
+`tar opções arquivo_ou_diretório`
+
+## Exemplos de Uso:
+
+- Criar um Arquivo Tar:
+
+`tar -cvf arquivo.tar arquivo1 arquivo2 diretório`
+
+`-c`: Cria um novo arquivo tar.
+
+`-v`: Mostra detalhes do processo.
+
+`-f`: Especifica o nome do arquivo tar.
+
+- Extrair um Arquivo Tar:
+
+`tar -xvf arquivo.tar`
+
+`-x`: Extrai o conteúdo do arquivo tar.
+
+- Criar um Arquivo Tar com Compressão Gzip:
+
+`tar -czvf arquivo.tar.gz arquivo1 arquivo2 diretório`
+
+`-z`: Usa compressão gzip.
+
+- Extrair um Arquivo Tar com Compressão Gzip:
+
+`tar -xzvf arquivo.tar.gz`
+
+- `-x`: Extrai o conteúdo.
+
+- `-z`: Usa compressão gzip.
+
+- Listar o Conteúdo de um Arquivo Tar:
+
+`tar -tvf arquivo.tar`
+
+- `-t`: Lista o conteúdo do arquivo.
+
+## Opções Comuns:
+
+`-c`, `--create`: Cria um novo arquivo tar.
+
+`-x`, `--extract`: Extrai o conteúdo de um arquivo tar.
+
+`-v`, `--verbose`: Mostra detalhes do processo.
+
+`-f`, `--file`: Especifica o nome do arquivo tar.
+
+`-z`, `--gzip`: Usa compressão gzip.
+
+`-j`, `--bzip2`: Usa compressão bzip2.
+
+## Cuidado:
+
+- Ao criar arquivos `tar`, certifique-se de listar todos os arquivos e diretórios que deseja incluir.
+
+- Ao extrair, verifique se você está no diretório desejado, pois os arquivos serão extraídos no diretório atual.
+
+O comando `tar` é uma ferramenta versátil e é amplamente usada para empacotar e desempacotar arquivos em ambientes Unix.

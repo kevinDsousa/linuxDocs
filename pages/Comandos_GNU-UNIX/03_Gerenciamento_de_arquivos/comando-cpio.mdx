@@ -1,0 +1,49 @@
+# Comando Cpio
+
+O comando `cpio` é utilizado para copiar arquivos para ou a partir de um arquivo de arquivo (arquivo cpio). Este comando é frequentemente usado em conjunto com outros comandos para criar cópias de backup ou para copiar arquivos em uma estrutura específica. Aqui estão algumas informações sobre o `cpio`:
+
+## Exemplos de Uso Básico:
+
+- Criar um Arquivo Cpio a partir de uma Lista de Arquivos:
+
+`find . -depth -print | cpio -ov > arquivo.cpio`
+
+Este comando encontra todos os arquivos no diretório atual (e subdiretórios) e cria um arquivo cpio chamado arquivo.cpio contendo esses arquivos.
+
+- Extrair Arquivos de um Arquivo Cpio:
+
+`cpio -idv < arquivo.cpio`
+
+Este comando extrai os arquivos do arquivo cpio chamado arquivo.cpio no diretório atual.
+
+## Opções Comuns:
+
+- `-o`, `--create:` Cria um arquivo cpio.
+
+- `-i`, `--extract:` Extrai arquivos de um arquivo cpio.
+
+- `-d`, `--make-directories`: Cria diretórios conforme necessário durante a extração.
+
+- `-v`, `--verbose:` Mostra detalhes sobre o processo de cópia ou extração.
+
+## Exemplos de Opções:
+
+- Criar um Arquivo Cpio com Compactação gzip:
+
+`find . -depth -print | cpio -ov | gzip > arquivo.cpio.gz`
+
+Este comando cria um arquivo cpio e o compacta usando gzip.
+
+- Extrair Arquivos de um Arquivo Cpio Compactado:
+
+`gzip -d -c arquivo.cpio.gz | cpio -idv`
+
+Este comando descompacta um arquivo cpio compactado usando gzip e extrai os arquivos.
+
+## Cuidado:
+
+O `cpio` é flexível e pode ser combinado com outras ferramentas, como `find` e `gzip`, para realizar tarefas mais avançadas.
+
+Ao criar um arquivo cpio, você pode redirecionar a saída para um arquivo ou compactá-la usando outras ferramentas de compactação, como `gzip` ou `bzip2`.
+
+O `cpio` é uma ferramenta poderosa e versátil para manipulação de arquivos e cópias de backup em sistemas Unix-like.

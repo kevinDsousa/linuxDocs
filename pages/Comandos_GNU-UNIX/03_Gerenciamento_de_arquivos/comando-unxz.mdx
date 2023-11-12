@@ -1,0 +1,35 @@
+# Comando Unxz
+
+O comando `unxz` é utilizado para descompactar arquivos que foram previamente compactados no formato XZ, geralmente pelo comando `xz`. Aqui estão algumas informações sobre o unxz:
+
+## Exemplo de Uso:
+
+`unxz arquivo.xz`
+
+Este comando descompacta o arquivo `arquivo.xz`, restaurando-o ao seu estado original. O resultado é um novo arquivo chamado arquivo.
+
+## Opções Comuns:
+
+`-k`, `--keep`: Mantém o arquivo compactado após a descompactação.
+
+`-c`, `--stdout`: Escreve a saída no console em vez de criar um novo arquivo descompactado. Isso é útil quando você deseja direcionar a saída para outro comando ou arquivo sem modificar os arquivos originais.
+
+## Exemplos de Opções:
+
+- Descompactar e Manter o Arquivo Compactado:
+
+`unxz -k arquivo.xz`
+
+- Descompactar e Escrever Saída no Console:
+
+`unxz -c arquivo.xz > arquivo`
+
+## Cuidado:
+
+O comando `unxz` modifica o arquivo compactado, descompactando-o e criando um novo arquivo descompactado. Se você deseja manter o arquivo compactado original e criar um novo arquivo descompactado, é recomendável fazer uma cópia antes de usar o `unxz`.
+
+## Dica:
+
+O `unxz` é frequentemente utilizado em scripts ou comandos que requerem descompactação rápida e direta de arquivos XZ.
+
+Este comando é uma parte essencial do conjunto de ferramentas de compactação no ambiente Linux e é particularmente útil quando se lida com arquivos compactados no formato XZ.

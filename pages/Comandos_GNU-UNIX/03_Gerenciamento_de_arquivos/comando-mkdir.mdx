@@ -1,0 +1,40 @@
+# Comando Mkdir
+
+O comando `mkdir` (abreviação de "make directory") é utilizado em sistemas Unix e Unix-like, incluindo o Linux, para criar diretórios (pastas). Ele é essencial para a organização de arquivos em um sistema de arquivos.
+
+## Sintaxe Básica:
+
+`mkdir [opções] diretório`
+
+## Exemplos de Uso:
+
+- Criar um Novo Diretório:
+
+`mkdir nome_do_diretorio`
+
+Isso cria um novo diretório com o nome `nome_do_diretorio` no diretório atual.
+
+- Criar Vários Diretórios:
+
+`mkdir dir1 dir2 dir3`
+
+Isso cria vários diretórios (`dir1`, `dir2`, `dir3`) no diretório atual.
+
+- Criar Diretório com Caminho Específico:
+
+`mkdir -p caminho/do/novo/diretorio`
+
+A opção `-p` permite criar diretórios pai (caminho completo) se eles não existirem.
+
+## Opções Comuns:
+
+`-p`: Cria diretórios pai (caminho completo) se eles não existirem. Essa opção é útil para criar toda a estrutura de diretórios necessária.
+
+## Observações e Dicas:
+
+Se o diretório especificado já existir, o `mkdir` geralmente emitirá um aviso informando que o diretório já existe, a menos que a opção -p seja usada.
+
+O comando `mkdir` é frequentemente usado em scripts de instalação ou automação para garantir que determinados diretórios estejam presentes antes de instalar ou manipular arquivos.
+
+Ao criar diretórios com espaços no nome, é aconselhável usar aspas, por exemplo: `mkdir` "diretório com espaço".
+O `mkdir` é uma ferramenta fundamental para organizar a estrutura de diretórios em sistemas de arquivos.

@@ -1,0 +1,39 @@
+# Comando Bunzip2
+
+O comando `bunzip2` é usado para descompactar arquivos que foram comprimidos com o utilitário Bzip2. Ele desfaz a compactação criada pelo `bzip2`, restaurando o arquivo ao seu estado original. Aqui estão algumas informações sobre o `bunzip2`:
+
+## Exemplo de Uso:
+
+- Descompactar um Arquivo:
+
+`bunzip2 arquivo.bz2`
+
+Este comando descompacta o arquivo arquivo.bz2, criando um novo `arquivo` chamado `arquivo`.
+
+## Opções Comuns:
+
+`-k`, `--keep`: Mantém o arquivo compactado após a descompactação.
+
+`-c`, `--stdout`: Escreve a saída no console em vez de criar um arquivo descompactado. Isso é útil quando você deseja direcionar a saída para outro comando ou arquivo sem modificar o arquivo original compactado.
+
+## Exemplos de Opções:
+
+- Descompactar e Manter o Arquivo Compactado:
+
+`bunzip2 -k arquivo.bz2`
+
+- Descompactar e Escrever Saída no Console:
+
+`bunzip2 -c arquivo.bz2 > arquivo`
+
+## Cuidado:
+
+O comando `bunzip2` modifica o arquivo compactado, descompactando-o. Se você deseja manter o arquivo compactado e criar um novo arquivo descompactado, é recomendável fazer uma cópia antes de usar `bunzip2`.
+
+## Dica:
+
+Assim como o comando `bzip2`, o `bunzip2` é frequentemente usado em conjunto com o comando tar para descompactar arquivos compactados (`.tar.bz2` ou `.tbz`). Por exemplo:
+
+`tar xjvf arquivo.tar.bz2`
+
+O `bunzip2` é uma ferramenta simples e eficaz para descompactar arquivos que foram comprimidos usando o algoritmo Bzip2.

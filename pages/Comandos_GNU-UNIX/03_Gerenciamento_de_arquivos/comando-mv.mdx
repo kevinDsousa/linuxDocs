@@ -1,0 +1,47 @@
+# Comando Mv
+
+O comando `mv` é usado em sistemas operacionais Unix e Unix-like, incluindo o Linux, para mover ou renomear arquivos e diretórios. Além de sua funcionalidade principal de mover arquivos, ele também pode ser usado para renomear arquivos ou diretórios.
+
+## Sintaxe Básica:
+
+`mv [opções] origem destino`
+
+## Exemplos de Uso:
+
+- Mover um Arquivo para um Diretório:
+
+`mv arquivo.txt /caminho/do/diretorio/`
+
+Isso move o arquivo `arquivo.txt` para o diretório especificado.
+
+- Renomear um Arquivo ou Diretório:
+
+`mv nome_antigo.txt nome_novo.txt`
+
+Isso renomeia o arquivo `nome_antigo.txt` para `nome_novo.txt`.
+
+## Mover e Renomear Diretórios:
+
+`mv diretorio_antigo/ novo_diretorio/`
+
+Isso move o diretório `diretorio_antigo` para `novo_diretorio`, efetivamente renomeando-o.
+
+## Opções Comuns:
+
+`-i`: Pede confirmação antes de sobrescrever um arquivo existente.
+
+`-u`: Atualiza apenas os arquivos que são mais recentes do que os correspondentes no destino ou que estão ausentes no destino.
+
+`-b`: Cria backups dos arquivos existentes antes de substituí-los.
+
+`-f`: Força a sobreposição sem confirmação.
+
+## Observações e Dicas:
+
+O `mv` também é usado para renomear diretórios. Ao mover um diretório para um novo nome, efetivamente você está renomeando-o.
+
+Se o destino for um diretório existente, os arquivos são movidos para esse diretório. Se o destino for um arquivo existente, ele será substituído.
+
+A opção `-i` é útil para evitar substituições acidentais de arquivos importantes.
+
+Assim como o `cp`, o `mv` é frequentemente usado em scripts e automações para manipulação de arquivos.

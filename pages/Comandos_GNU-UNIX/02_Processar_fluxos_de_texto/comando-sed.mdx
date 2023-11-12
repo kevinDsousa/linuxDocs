@@ -1,0 +1,71 @@
+# Comando Sed
+
+O comando `sed` é uma ferramenta poderosa de processamento de texto em sistemas Unix e Unix-like. O nome "sed" é derivado de "stream editor" (editor de fluxo), indicando sua capacidade de fazer alterações em fluxos de texto. O `sed` permite que você especifique um conjunto de comandos para serem aplicados a cada linha de entrada de texto ou a um intervalo específico de linhas. Aqui estão alguns conceitos-chave e exemplos de uso:
+
+## Sintaxe Básica:
+
+`sed [OPÇÕES] 'comando' arquivo(s)`
+
+## Exemplos de Comandos sed:
+
+### Substituir Texto:
+
+- Substituir a primeira ocorrência de "antigo" por "novo" em cada linha:
+
+`sed 's/antigo/novo/' arquivo.txt`
+
+- Substituir todas as ocorrências de "antigo" por "novo" em cada linha:
+
+`sed 's/antigo/novo/g' arquivo.txt`
+
+### Excluir Linhas:
+
+- Excluir linhas que correspondem a um padrão:
+
+`sed '/padrão/d' arquivo.txt`
+
+### Adicionar ou Inserir Linhas:
+
+- Adicionar uma nova linha após cada linha correspondente ao padrão:
+
+`sed '/padrão/a\Nova Linha' arquivo.txt`
+
+- Inserir uma nova linha antes de cada linha correspondente ao padrão:
+
+`sed '/padrão/i\Nova Linha' arquivo.txt`
+
+### Substituição com Expressões Regulares:
+
+- Usar expressões regulares em substituições:
+
+`sed 's/[0-9]\+/NUMERO/' arquivo.txt`
+
+### Salvar Alterações no Próprio Arquivo (in-place):
+
+- Adicionar a opção -i para salvar alterações no próprio arquivo:
+
+`sed -i 's/antigo/novo/' arquivo.txt`
+
+## Exemplo Prático:
+
+Suponha que você tenha um arquivo chamado exemplo.txt com o seguinte conteúdo:
+
+```
+Esta é uma linha de exemplo.
+Substitua a palavra "exemplo" por "amostra".
+Esta é outra linha de exemplo.
+```
+
+Para substituir "exemplo" por "amostra" em todas as ocorrências, você usaria:
+
+`sed 's/exemplo/amostra/g' exemplo.txt`
+
+Isso resultará em:
+
+```
+Esta é uma linha de amostra.
+Substitua a palavra "amostra" por "amostra".
+Esta é outra linha de amostra.
+```
+
+O `sed` oferece uma variedade de comandos e opções, e é uma ferramenta versátil para manipulação de texto em scripts ou no terminal. Certifique-se de consultar a documentação do `sed` para explorar todas as suas capacidades.

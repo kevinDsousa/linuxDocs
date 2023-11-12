@@ -1,0 +1,46 @@
+# Comando Cp
+
+O comando `cp` é utilizado em sistemas operacionais Unix e Unix-like, incluindo o Linux, para copiar arquivos e diretórios de um local para outro. Ele é uma ferramenta fundamental para a manipulação de arquivos no sistema de arquivos.
+
+## Sintaxe Básica:
+
+`cp [opções] origem destino`
+
+## Exemplos de Uso:
+
+- Copiar um Arquivo para um Diretório:
+
+`cp arquivo.txt /caminho/do/diretorio/`
+
+Isso copia o arquivo `arquivo.txt` para o diretório especificado.
+
+- Copiar um Diretório Recursivamente:
+
+`cp -r diretorio_origem/ diretorio_destino/`
+
+A opção `-r`(ou `-R`) é usada para copiar recursivamente todos os arquivos e subdiretórios.
+
+- Copiar e Renomear um Arquivo:
+
+`cp original.txt novo_nome.txt`
+
+Isso cria uma cópia do arquivo `original.txt` com o nome `novo_nome.txt`.
+
+## Opções Comuns:
+
+- `-r`, `-R`: Copia diretórios e seus conteúdos recursivamente.
+
+- `-i`: Pede confirmação antes de sobrescrever um arquivo existente.
+
+- `-u`: Atualiza apenas os arquivos que são mais recentes do que os correspondentes no destino ou que estão ausentes no destino.
+
+- `-a`: Copia recursiva e preserva permissões, carimbos de data/hora e outros atributos.
+Observações e Dicas:
+
+Se o destino for um diretório existente, os arquivos são copiados para esse diretório. Se o destino for um arquivo existente, ele será substituído.
+
+A opção `-i` é útil para evitar substituições acidentais de arquivos importantes.
+O `cp` é uma ferramenta versátil e é frequentemente usada em scripts e automações para manipulação de arquivos.
+
+
+

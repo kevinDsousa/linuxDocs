@@ -1,0 +1,45 @@
+# Comando DD
+
+O comando `dd` é uma ferramenta de cópia de dados presente em sistemas operacionais Unix e Unix-like. Ele é frequentemente usado para realizar operações de cópia e conversão de dados byte a byte. O dd é uma ferramenta poderosa, mas também pode ser perigosa se não for usada com cuidado, pois pode sobrescrever dados de maneira irreversível. Aqui estão alguns conceitos e exemplos de uso do comando `dd`:
+
+`dd if=origem of=destino bs=tamanho_do_bloco`
+
+- if (input file): Especifica o arquivo de origem.
+
+- of (output file): Especifica o arquivo de destino.
+
+- bs (block size): Define o tamanho do bloco de dados a ser lido/gravado em bytes.
+
+## Exemplos de Uso:
+
+- Cópia de um Dispositivo para Outro:
+
+`dd if=/dev/sda of=/dev/sdb bs=4M`
+
+Este comando copia todo o conteúdo do dispositivo `/dev/sda` para o dispositivo `/dev/sdb` com um tamanho de bloco de 4 megabytes.
+
+- Cópia de um Arquivo para Outro:
+
+`dd if=arquivo_origem of=arquivo_destino bs=512`
+
+Este comando copia o conteúdo do `arquivo_origem` para o `arquivo_destino` com um tamanho de bloco de 512 bytes.
+
+## Opções Comuns:
+
+`if` e of: Especificam os arquivos de entrada e saída, respectivamente.
+
+`bs`: Define o tamanho do bloco.
+
+`count`: Especifica o número de blocos a serem copiados.
+
+`skip`: Pula um número específico de blocos no início do arquivo de entrada.
+
+## Cuidado:
+
+Ao usar o `dd`, é crucial garantir que os caminhos de entrada e saída estejam corretos, pois ele pode sobrescrever dados de maneira irreversível.
+
+Use com cuidado o parâmetro of (output file) para evitar sobrescrever dados importantes acidentalmente.
+
+O `dd` não exibe progresso por padrão, então operações em grandes conjuntos de dados podem parecer inativas por um tempo.
+
+O `dd` é uma ferramenta poderosa para operações de cópia e conversão de dados, mas deve ser usada com atenção para evitar a perda acidental de dados.
