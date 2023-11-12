@@ -10,11 +10,10 @@ const withNextra = require("nextra")({
 
 
 module.exports = {
-  target: 'experimental-serverless-trace',
-
-  exportPathMap: async function () {
-    return {
-      '/': { page: '/01_Linha_de_comandos/comando-and' },
-    };
-  },
+  // exportPathMap: async function () {
+  //   return {
+  //     '/': { page: '/01_Linha_de_comandos/comando-and' },
+  //   };
+  // },
+  ...withNextra(),
 };
