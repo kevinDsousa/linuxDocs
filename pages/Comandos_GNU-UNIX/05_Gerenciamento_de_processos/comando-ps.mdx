@@ -1,0 +1,68 @@
+# Comando Ps
+
+ comando `ps` é uma ferramenta de linha de comando comum em sistemas Unix e Linux, usada para fornecer informações sobre os processos em execução no sistema. O `ps` oferece uma visão instantânea dos processos em execução e é frequentemente utilizado para diagnósticos e monitoramento do sistema. Aqui estão alguns conceitos e exemplos-chave relacionados ao comando `ps`:
+
+## Funcionamento Básico:
+
+- Lista de Processos:
+
+O `ps` exibe uma lista de processos em execução no sistema no momento da execução do comando.
+
+- Informações Padrão:
+
+Por padrão, o `ps` mostra informações como o ID do processo (PID), o ID do terminal associado, o uso de CPU, a memória virtual e o tempo de CPU.
+
+## Exemplos de Uso:
+
+- Listar Todos os Processos do Usuário Atual:
+
+`ps`
+
+Este comando lista os processos associados ao terminal do usuário que o executou.
+
+- Listar Todos os Processos do Sistema:
+
+`ps aux`
+
+O uso da opção aux exibe informações detalhadas sobre todos os processos no sistema, incluindo processos de outros usuários.
+
+- Listar Processos em Formato Estendido:
+
+`ps -e -o pid,ppid,cmd,%mem,%cpu`
+
+Aqui, o comando exibe informações específicas (PID, PPID, comando, uso de memória e uso de CPU) para todos os processos em execução.
+
+- Listar Processos de um Usuário Específico:
+
+`ps -u nome_do_usuario`
+
+Exibe os processos associados a um usuário específico.
+
+## Opções Comuns:
+
+`a`:
+Exibe processos de todos os usuários.
+
+`u`:
+Exibe informações detalhadas do usuário, incluindo o nome do usuário associado a cada processo.
+
+`x`:
+Inclui processos sem terminal associado.
+
+`e`:
+Exibe informações detalhadas de todos os processos, não apenas aqueles associados ao terminal do usuário.
+
+`o`:
+Permite especificar colunas personalizadas a serem exibidas.
+
+## Considerações de Uso:
+
+- Variações de Sintaxe:
+
+O formato das opções pode variar entre diferentes implementações do ps. As opções mencionadas acima são comuns, mas pode ser necessário consultar a documentação específica do sistema para obter detalhes precisos.
+
+- Interpretação de Resultados:
+
+Algumas informações, como uso de CPU e memória, podem ser exibidas em formatos específicos e podem exigir interpretação adicional.
+
+O `ps` é uma ferramenta essencial para monitoramento e diagnóstico de processos em sistemas Unix e Linux. Sua versatilidade e capacidade de fornecer informações detalhadas sobre os processos em execução o tornam uma ferramenta valiosa para administradores de sistema e usuários avançados.

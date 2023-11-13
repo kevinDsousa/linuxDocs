@@ -1,0 +1,55 @@
+# Comando Tee
+
+O comando `tee` é uma ferramenta útil em sistemas Unix e Linux que permite redirecionar a saída padrão de um comando para um arquivo e, ao mesmo tempo, exibi-la no terminal. O tee é frequentemente utilizado em pipelines para salvar o resultado de um comando em um arquivo, mantendo a exibição desse resultado no console. Aqui estão alguns conceitos e exemplos-chave relacionados ao `tee`:
+
+## Funcionamento Básico:
+
+- Redirecionamento Duplo:
+
+O `tee` redireciona a saída padrão (stdout) de um comando tanto para um arquivo quanto para o terminal.
+
+## Exemplos de Uso:
+
+- Redirecionamento para Arquivo:
+
+`ls -l | tee output.txt`
+
+Este exemplo lista o conteúdo do diretório atual usando `ls -l` e salva o resultado no arquivo `output.txt` ao mesmo tempo.
+
+- Anexar a um Arquivo Existente:
+
+`echo "Novo conteúdo" | tee -a output.txt`
+
+O uso da opção `-a` permite que o tee anexe a saída ao invés de sobrescrever um arquivo existente.
+
+- Comando com Múltiplas Tubulações:
+
+`cat arquivo.txt | grep "padrão" | tee saida.txt | wc -l`
+
+Neste exemplo, a saída do comando `cat` é filtrada por `grep` e, ao mesmo tempo, é salva no arquivo `saida.txt`. A contagem das linhas resultantes é exibida no terminal.
+
+- Saída para o Pipeline e para o Arquivo:
+
+`ls -l | tee >(grep "diretorio.txt") | grep "arquivo.txt"`
+
+O `tee` pode ser usado com processos em segundo plano para enviar a saída para múltiplos destinos, incluindo pipelines e arquivos.
+
+## Opções Comuns:
+
+`a`, `--append`:
+Anexa à vez de sobrescrever um arquivo existente.
+
+`-i`, `--ignore-interrupts`:
+Ignora sinais de interrupção (Ctrl+C), permitindo que o tee continue a execução mesmo se o terminal receber um sinal de interrupção.
+
+## Considerações de Uso:
+
+- Priorize a Segurança:
+
+Se a entrada do tee for proveniente de fontes não confiáveis, pode haver riscos de injeção de dados. Considere validar ou sanitizar a entrada adequadamente.
+
+- Compatibilidade com POSIX:
+
+O comportamento específico do `tee` pode variar entre sistemas Unix. Algumas versões podem ter recursos ou opções específicas que não são universalmente suportados.
+
+O `tee` é uma ferramenta versátil que oferece flexibilidade no gerenciamento da saída padrão de comandos. Pode ser especialmente útil ao construir pipelines complexos ou ao desejar salvar a saída de um comando em um arquivo para referência futura.

@@ -1,0 +1,81 @@
+# Comando Top
+
+O comando `top` é uma ferramenta de linha de comando usada em sistemas Unix e Linux para monitorar em tempo real o uso do sistema e a atividade dos processos. Ele fornece uma visão dinâmica e interativa que é atualizada periodicamente, permitindo que os usuários monitorem os recursos do sistema, como CPU, memória e atividade de E/S. Aqui estão algumas características e exemplos-chave relacionados ao comando `top`:
+
+## Funcionamento Básico:
+
+- Exibição em Tempo Real:
+
+O `top` exibe informações em tempo real sobre o uso do sistema e a atividade dos processos. A tela é atualizada automaticamente a intervalos regulares.
+
+- Listagem de Processos:
+
+Ele lista os processos em execução no sistema, classificados por diferentes critérios, como uso de CPU, uso de memória, etc.
+
+## Exemplos de Uso:
+
+- Executar o Top:
+
+`top`
+
+Isso iniciará a interface interativa do `top` e exibirá informações em tempo real sobre os processos e o uso de recursos.
+
+- Classificar por Uso de CPU:
+
+`top -o %CPU`
+
+Ordena os processos com base no uso atual da CPU, mostrando os processos mais intensivos em CPU no topo.
+
+- Atualizar com Intervalos Específicos:
+
+`top -d 5`
+
+Atualiza a tela a cada 5 segundos em vez do intervalo padrão.
+
+## Características Comuns:
+
+- Lista de Processos:
+
+O `top` exibe uma lista de processos em execução, mostrando detalhes como PID, usuário, uso de CPU, uso de memória, tempo de execução e outros.
+
+- Gráficos de Atividade:
+
+Ele exibe gráficos de barras para representar visualmente o uso da CPU e da memória.
+
+- Comandos Interativos:
+
+A interface do `top` é interativa, permitindo que os usuários enviem comandos em tempo real para alterar a exibição, ordenação e outros aspectos.
+
+## Comandos Interativos no Top:
+
+- Mudar a Ordenação:
+
+Pressionando `o`, você pode escolher diferentes campos para ordenação, como %CPU, %MEM, etc.
+
+- Matar Processo:
+
+Pressionando `k`, você pode inserir o PID de um processo para encerrá-lo.
+
+- Alterar Atualização Automática:
+
+Pressionando `s`, você pode alterar o intervalo de atualização automática.
+
+- Sair do Top:
+
+Pressionando `q`, você pode sair do top e retornar ao prompt de comando.
+
+## Considerações de Uso:
+
+- Monitoramento em Tempo Real:
+
+O `top` é uma ferramenta eficaz para monitorar o sistema em tempo real e identificar processos que podem estar consumindo muitos recursos.
+
+- Diagnóstico de Desempenho:
+
+Pode ser usado para diagnosticar problemas de desempenho, identificando processos que podem estar causando sobrecarga na CPU ou na memória.
+
+- Análise de Recursos:
+
+Facilita a análise detalhada do uso de CPU, memória, E/S e outros recursos do sistema.
+
+O comando `top` é uma ferramenta poderosa para administradores de sistemas e usuários avançados que precisam monitorar e diagnosticar o desempenho do sistema em tempo real.

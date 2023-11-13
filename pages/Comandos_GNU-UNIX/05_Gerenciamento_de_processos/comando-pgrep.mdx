@@ -1,0 +1,69 @@
+# Comando Pgrep
+
+O comando `pgrep` é uma ferramenta de linha de comando disponível em sistemas Unix e Linux que é usada para pesquisar e listar IDs de processo (PID) com base em critérios de correspondência de nomes de processo. Ele faz parte do conjunto de comandos que ajudam na manipulação de processos. Aqui estão algumas características e exemplos-chave relacionados ao comando `pgrep`:
+
+## Funcionamento Básico:
+
+- Correspondência por Nome:
+
+O `pgrep` pesquisa processos com base em expressões regulares ou strings exatas correspondentes aos nomes dos processos.
+
+- Saída de PID:
+
+Ele retorna os PIDs dos processos encontrados que correspondem aos critérios de pesquisa.
+
+## Exemplos de Uso:
+
+- Pesquisar por Nome Exato:
+
+`pgrep -x nome-do-processo`
+
+Isso procura processos cujo nome é exatamente "nome-do-processo".
+
+- Pesquisar por Expressão Regular:
+
+`pgrep "^processo.*"`
+
+Isso procura processos cujo nome começa com "processo".
+
+- Pesquisar por Usuário Específico:
+
+`pgrep -u nome-do-usuario`
+
+Isso procura processos pertencentes ao usuário especificado.
+
+- Inverter a Correspondência:
+
+`pgrep -v -x nome-do-processo`
+
+Isso retorna PIDs de processos que NÃO correspondem ao nome especificado.
+
+## Características Comuns:
+
+- Correspondência Exata:
+
+A opção `-x` garante que a correspondência seja exata, não parcial.
+
+- Correspondência por Usuário:
+
+A opção `-u` permite pesquisar processos pertencentes a um usuário específico.
+
+- Inversão de Correspondência:
+
+A opção `-v` inverte a correspondência, retornando PIDs de processos que NÃO correspondem ao critério especificado.
+
+## Considerações de Uso:
+
+- Automatização de Tarefas:
+
+O `pgrep` é útil em scripts ou comandos que requerem automação, permitindo a identificação de PIDs de processos com base em critérios específicos.
+
+- Integração com Outros Comandos:
+
+Pode ser combinado com outros comandos relacionados a processos, como `kill`, para automatizar a manipulação de processos.
+
+- Monitoramento e Diagnóstico:
+
+Ajuda na identificação de processos específicos para fins de monitoramento ou diagnóstico de problemas relacionados a processos.
+
+O `pgrep` é uma ferramenta eficiente e versátil para pesquisar processos com base em vários critérios, facilitando a automação e a interação com o sistema operacional.

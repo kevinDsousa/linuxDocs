@@ -1,0 +1,55 @@
+# Comando KillAll
+
+O comando `killall` é uma ferramenta de linha de comando em sistemas Unix e Linux que é utilizada para encerrar processos com base em seus nomes. Assim como o `pkill`, o `killall` simplifica o processo de encerramento de processos em comparação com o comando `kill`, que requer a especificação do PID (identificador de processo). Abaixo estão alguns pontos-chave relacionados ao comando `killall`:
+
+### Funcionamento Básico:
+
+- **Encerramento por Nome:**
+  O `killall` encerra processos com base em seus nomes, sem a necessidade de fornecer explicitamente os PIDs.
+
+- **Sinais Padrão:**
+  O sinal padrão enviado pelo `killall` é `SIGTERM` (15), que solicita a terminação do processo. Isso pode ser modificado usando a opção `-<sinal>`.
+
+### Exemplos de Uso:
+
+1. **Encerrar um Processo por Nome:**
+   ```bash
+   killall nome-do-processo
+   ```
+   Isso encerra todos os processos cujo nome corresponde ao especificado.
+
+2. **Especificar Sinal Personalizado:**
+   ```bash
+   killall -TERM nome-do-processo
+   ```
+   Isso envia o sinal `SIGTERM` para o processo.
+
+3. **Forçar Encerramento (SIGKILL):**
+   ```bash
+   killall -9 nome-do-processo
+   ```
+   Isso envia o sinal `SIGKILL`, forçando o encerramento imediato do processo.
+
+### Características Comuns:
+
+- **Sinais Personalizados:**
+  Assim como o `kill`, o `killall` permite o uso de sinais personalizados para diferentes finalidades.
+
+- **Visualização Sem Encerramento:**
+  Por padrão, `killall` exibe uma lista de processos que corresponderiam aos critérios especificados, sem encerrá-los. O uso da opção `-l` inverte esse comportamento, mostrando apenas os processos que foram encerrados.
+
+### Considerações de Uso:
+
+- **Facilidade de Uso:**
+  `killall` simplifica a tarefa de encerrar processos quando se conhece apenas o nome do processo.
+
+- **Uso Cauteloso:**
+  Deve-se ter cuidado ao usar `killall` com critérios amplos para evitar encerrar processos indesejados.
+
+- **Monitoramento e Automação:**
+  É comumente usado em scripts e automações para controlar processos com base em seus nomes.
+
+- **Diferença Entre `kill` e `killall`:**
+  Enquanto `kill` requer a especificação do PID, `killall` trabalha diretamente com nomes de processos, tornando-o mais conveniente para determinadas situações.
+
+O comando `killall` é uma ferramenta útil para administradores de sistemas e usuários que precisam encerrar processos de maneira eficiente, especialmente quando se conhece apenas o nome do processo a ser encerrado.

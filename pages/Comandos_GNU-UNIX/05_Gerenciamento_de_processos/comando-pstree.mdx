@@ -1,0 +1,64 @@
+# Comando Pstree
+
+O comando `pstree` é uma ferramenta de linha de comando usada em sistemas Unix e Linux para exibir uma representação hierárquica dos processos em execução no sistema. Ele organiza os processos em uma árvore, facilitando a visualização das relações de pai e filho entre os processos. Aqui estão algumas características e exemplos-chave relacionados ao comando pstree:
+
+## Funcionamento Básico:
+
+- Representação Hierárquica:
+
+O `pstree` exibe os processos em uma estrutura de árvore, mostrando as relações de pai e filho entre eles.
+
+- Indentação:
+
+A indentação na saída do `pstree` indica a hierarquia dos processos. Processos mais à direita são filhos de 
+processos à esquerda.
+
+## Exemplos de Uso:
+
+- Listar Todos os Processos Hierarquicamente:
+
+`pstree`
+
+Este comando exibe uma representação hierárquica de todos os processos em execução no sistema.
+
+- Listar Processos de um Usuário Específico:
+
+`pstree -u nome_do_usuario`
+
+Mostra a árvore de processos associados a um usuário específico.
+
+- Visualizar Números PID:
+
+`pstree -p`
+
+Exibe números PID ao lado de cada processo na árvore.
+
+## Opções Comuns:
+
+`-u`:
+Exibe os nomes dos usuários donos dos processos.
+
+`-p`:
+Mostra os números PID junto com os nomes dos processos.
+
+`-n`:
+Ordena os processos numericamente (útil quando há muitos processos).
+
+`-h`:
+Inclui o próprio pstree na saída.
+
+## Considerações de Uso:
+
+- Análise de Relacionamentos:
+
+O `pstree` é útil para entender a relação entre os processos, especialmente em ambientes complexos.
+
+- Facilidade de Leitura:
+
+A saída do `pstree` é projetada para ser facilmente legível, com indentação que reflete as relações hierárquicas.
+
+- Visualização de Processos:
+
+Pode ser usado para identificar subprocessos associados a processos principais, facilitando a visualização da estrutura de execução do sistema.
+
+O `pstree` é uma ferramenta útil para visualizar a estrutura hierárquica dos processos em execução no sistema, proporcionando uma visão clara das relações entre processos pai e filho. É especialmente útil em situações em que é necessário entender a organização e a hierarquia dos processos em um sistema Unix ou Linux.

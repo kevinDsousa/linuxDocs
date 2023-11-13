@@ -1,0 +1,55 @@
+# Comando Pkill
+
+O comando `pkill` é uma ferramenta de linha de comando em sistemas Unix e Linux que é utilizada para enviar sinais a processos com base em seus nomes ou outras características associadas a eles. É uma forma mais conveniente de encerrar processos em comparação com `kill`, que requer especificação do PID (identificador de processo). Abaixo estão alguns pontos-chave relacionados ao comando `pkill`:
+
+### Funcionamento Básico:
+
+- **Encerramento por Nome:**
+  O `pkill` permite encerrar processos com base em seus nomes ou outros critérios associados a eles, sem a necessidade de fornecer explicitamente os PIDs.
+
+- **Sinais Padrão:**
+  O sinal padrão enviado pelo `pkill` é `SIGTERM` (15), que solicita a terminação do processo. Isso pode ser modificado usando a opção `-<sinal>`.
+
+### Exemplos de Uso:
+
+1. **Encerrar um Processo por Nome:**
+   ```bash
+   pkill nome-do-processo
+   ```
+   Isso encerra todos os processos cujo nome corresponde ao especificado.
+
+2. **Encerrar um Processo por Expressão Regular:**
+   ```bash
+   pkill -f "expressao-regular"
+   ```
+   Isso encerra processos cuja linha de comando corresponde à expressão regular.
+
+3. **Especificar Sinal Personalizado:**
+   ```bash
+   pkill -TERM nome-do-processo
+   ```
+   Isso envia o sinal `SIGTERM` para o processo.
+
+### Características Comuns:
+
+- **Expressões Regulares:**
+  O uso da opção `-f` permite o uso de expressões regulares para correspondência mais flexível.
+
+- **Sinais Personalizados:**
+  Assim como o `kill`, o `pkill` permite o uso de sinais personalizados para diferentes finalidades.
+
+- **Visualização Sem Encerramento:**
+  Por padrão, `pkill` exibe uma lista de processos que corresponderiam aos critérios especificados, sem encerrá-los. O uso da opção `-l` inverte esse comportamento, mostrando apenas os processos que foram encerrados.
+
+### Considerações de Uso:
+
+- **Facilidade de Uso:**
+  `pkill` simplifica a tarefa de encerrar processos em comparação com `kill`, especialmente quando se conhece apenas o nome do processo.
+
+- **Uso Cauteloso:**
+  Deve-se ter cuidado ao usar `pkill` com critérios amplos para evitar encerrar processos indesejados.
+
+- **Monitoramento e Automação:**
+  É comumente usado em scripts e automações para controlar processos com base em seus nomes ou outros atributos.
+
+O comando `pkill` é uma ferramenta útil para administradores de sistemas e usuários que precisam encerrar processos de maneira eficiente, sem a necessidade de identificar manualmente os PIDs.
