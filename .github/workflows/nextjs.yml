@@ -45,7 +45,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v3
         with:
-            static_site_generator: next        
+          static_site_generator: next
       - name: Restore cache
         uses: actions/cache@v3
         with:
@@ -61,6 +61,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
+          name: out
           path: ./out
 
   deploy:
@@ -74,4 +75,5 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v2
         with:
-          path: ./out
+          token: ${{ secrets.GITHUB_TOKEN }}
+          artifact_name: out
