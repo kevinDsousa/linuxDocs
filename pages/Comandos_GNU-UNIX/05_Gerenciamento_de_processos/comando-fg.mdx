@@ -1,0 +1,53 @@
+# Comando Fg
+
+O comando `fg` (foreground) é usado no sistema Unix e Linux para trazer um trabalho (job) que está em execução ou suspenso em segundo plano de volta para o primeiro plano. Isso é útil quando você deseja interagir diretamente com um trabalho que está em execução ou quando quer retomar um trabalho suspenso no primeiro plano. Aqui estão alguns pontos importantes sobre o comando `fg`:
+
+1. **Sintaxe Básica:**
+   ```bash
+   fg [número_do_trabalho]
+   ```
+   - `número_do_trabalho`: É o número associado ao trabalho que você deseja trazer para o primeiro plano. Se nenhum número for especificado, o trabalho mais recentemente suspenso será trazido para o primeiro plano.
+
+2. **Exemplo Básico:**
+   ```bash
+   # Suponha que o trabalho 1 esteja em segundo plano
+   fg %1
+   ```
+   Este comando traz o trabalho 1 de volta para execução no primeiro plano.
+
+3. **Retomando o Trabalho Mais Recente:**
+   Se você não especificar um número de trabalho, o `fg` trará o trabalho mais recentemente suspenso de volta para o primeiro plano.
+   ```bash
+   fg
+   ```
+
+4. **Uso Prático com `Ctrl+Z`:**
+   O comando `fg` é frequentemente usado em conjunto com `Ctrl+Z`, que suspende a execução do trabalho atual. Após suspender o trabalho, você pode usar `fg` para trazê-lo de volta para o primeiro plano.
+   ```bash
+   # Suspender o processo com Ctrl+Z
+   longo_processo
+   
+   # Retomar no primeiro plano
+   fg
+   ```
+
+5. **Opções Adicionais:**
+   O comando `fg` não tem muitas opções, mas você pode usar algumas bandeiras, como `-l`, para listar os trabalhos no formato longo (com informações adicionais).
+   ```bash
+   fg -l
+   ```
+
+6. **Comando Relacionado - `bg`:**
+   Enquanto `fg` traz um trabalho para o primeiro plano, o comando `bg` (background) move um trabalho para execução em segundo plano.
+
+7. **Exemplo Prático:**
+   ```bash
+   # Executar um processo em segundo plano
+   longo_processo &
+   
+   # Suspender o processo com Ctrl+Z
+   # Em seguida, retomar no primeiro plano
+   fg
+   ```
+
+O comando `fg` é útil quando você precisa interagir diretamente com um trabalho em execução ou quando deseja trazer um trabalho suspenso de volta para o primeiro plano. Ele permite que você continue a acompanhar a execução do trabalho e interagir diretamente com ele no terminal.

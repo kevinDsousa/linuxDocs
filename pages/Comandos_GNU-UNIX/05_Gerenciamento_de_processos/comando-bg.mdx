@@ -1,0 +1,53 @@
+# Comando Bg
+
+O comando `bg` (background) é utilizado no sistema Unix e Linux para enviar um trabalho (job) que está parado (suspenso) para execução em segundo plano. Este comando é útil quando você tem um processo que foi interrompido e você deseja retomá-lo em segundo plano. Aqui estão alguns aspectos importantes sobre o comando `bg`:
+
+1. **Sintaxe Básica:**
+   ```bash
+   bg [número_do_trabalho]
+   ```
+   - `número_do_trabalho`: É o número associado ao trabalho que você deseja enviar para o segundo plano. Se nenhum número for especificado, o trabalho mais recentemente suspenso será retomado em segundo plano.
+
+2. **Exemplo Básico:**
+   ```bash
+   # Suponha que o trabalho 1 tenha sido suspenso (Ctrl+Z)
+   bg %1
+   ```
+   Este comando enviará o trabalho 1 de volta para execução em segundo plano.
+
+3. **Retomando o Trabalho Mais Recente:**
+   Se você não especificar um número de trabalho, o `bg` retomará o trabalho mais recentemente suspenso.
+   ```bash
+   bg
+   ```
+
+4. **Opções Adicionais:**
+   O comando `bg` não tem muitas opções, mas você pode usar algumas bandeiras, como `-l`, para listar os trabalhos em execução no formato longo (com informações adicionais).
+   ```bash
+   bg -l
+   ```
+
+5. **Uso Prático com `Ctrl+Z`:**
+   O comando `bg` é frequentemente usado em conjunto com `Ctrl+Z`, que suspende a execução do trabalho atual. Após suspender o trabalho, você pode usar `bg` para enviá-lo para o segundo plano.
+   ```bash
+   # Suspender o processo com Ctrl+Z
+   longo_processo
+   
+   # Retomar em segundo plano
+   bg
+   ```
+
+6. **Comando Relacionado - `fg`:**
+   Enquanto `bg` move um trabalho para execução em segundo plano, o comando `fg` (foreground) move um trabalho para execução no primeiro plano.
+
+7. **Exemplo Prático:**
+   ```bash
+   # Executar um processo em segundo plano
+   longo_processo &
+   
+   # Suspender o processo com Ctrl+Z
+   # Em seguida, retomar em segundo plano
+   bg
+   ```
+
+O comando `bg` é uma ferramenta útil quando você precisa retomar a execução de um trabalho suspenso em segundo plano, permitindo que você continue a interagir com o terminal enquanto o trabalho está em andamento.

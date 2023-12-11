@@ -1,0 +1,56 @@
+# Comando Watch
+
+O comando `watch` é utilizado em sistemas Unix e Linux para executar periodicamente um comando e exibir os resultados de forma contínua na tela. Ele é útil para monitorar em tempo real a execução de comandos que fornecem informações atualizadas, como logs, saída de scripts ou o status de determinados processos.
+
+### Sintaxe Básica:
+
+```bash
+watch [opções] comando
+```
+
+- `opções`: São opções específicas do comando `watch`, que podem incluir ajustes de intervalo de atualização, entre outras.
+- `comando`: É o comando que você deseja executar e monitorar continuamente.
+
+### Exemplos Básicos:
+
+1. **Executar o Comando a Cada 2 Segundos (Padrão):**
+   ```bash
+   watch comando
+   ```
+   Este comando executa o `comando` a cada 2 segundos (intervalo padrão) e exibe os resultados na tela.
+
+2. **Definir Intervalo Específico:**
+   ```bash
+   watch -n 5 comando
+   ```
+   Este comando executa o `comando` a cada 5 segundos, ajustando o intervalo de atualização.
+
+### Uso Prático:
+
+1. **Monitoramento de Logs:**
+   - O `watch` pode ser usado para monitorar continuamente logs de sistema ou de aplicativos, permitindo que você observe novas entradas à medida que são registradas.
+
+2. **Execução de Comandos Periódicos:**
+   - Se você tem um comando que fornece informações em tempo real (como o uso de recursos com `top`), você pode usar `watch` para atualizar automaticamente essas informações na tela.
+
+3. **Acompanhamento de Progresso:**
+   - Ao executar um processo longo ou um script, `watch` pode ser usado para monitorar o progresso e ver os resultados conforme são produzidos.
+
+4. **Visualização Dinâmica de Diretórios:**
+   - Pode ser útil para monitorar alterações em diretórios, como novos arquivos adicionados ou removidos.
+
+### Exemplos Adicionais:
+
+- **Exibir a Diferença Entre as Atualizações:**
+   ```bash
+   watch -d comando
+   ```
+   A opção `-d` destaca as diferenças entre as saídas consecutivas do comando.
+
+- **Limitar o Número de Execuções:**
+   ```bash
+   watch -n 10 -c -t -x comando
+   ```
+   Neste exemplo, o `watch` executa o comando a cada 10 segundos (`-n 10`), limpa a tela (`-c`), exibe títulos (`-t`), e executa o comando com `sh -c` (`-x`), permitindo o uso de pipes e redirecionamentos.
+
+O comando `watch` é uma ferramenta flexível e útil para monitorar a execução de comandos de maneira contínua, facilitando a visualização de informações dinâmicas no terminal.

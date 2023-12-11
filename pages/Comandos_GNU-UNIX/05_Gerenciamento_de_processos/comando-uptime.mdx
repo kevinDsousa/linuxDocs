@@ -1,0 +1,53 @@
+# Comando Uptime
+
+O comando `uptime` é utilizado em sistemas Unix e Linux para exibir informações sobre o tempo que o sistema está em execução, a carga média do sistema nos últimos 1, 5 e 15 minutos, e o número de usuários conectados. Essas informações podem ser úteis para avaliar o desempenho do sistema e entender a carga média.
+
+### Sintaxe Básica:
+
+```bash
+uptime
+```
+
+### Exemplo de Saída Típica:
+
+A saída do comando `uptime` geralmente se parece com o seguinte:
+
+```
+ 14:32:07 up 15 days,  3:42,  2 users,  load average: 0.17, 0.13, 0.08
+```
+
+Os campos mais comuns incluem:
+
+- **Horário Atual:** Exibe a hora atual do sistema.
+  
+- **Tempo Ativo:** Indica o tempo que o sistema está em execução. No exemplo acima, "15 days, 3:42" significa que o sistema está em execução há 15 dias e 3 horas e 42 minutos.
+
+- **Número de Usuários:** Mostra o número de usuários atualmente conectados ao sistema. No exemplo, "2 users" indica que há dois usuários conectados.
+
+- **Carga Média:** A carga média do sistema é exibida nos últimos 1, 5 e 15 minutos. No exemplo, "0.17, 0.13, 0.08" são as cargas médias nos últimos 1, 5 e 15 minutos, respectivamente.
+
+### Uso Prático:
+
+1. **Verificação de Tempo de Atividade:** O comando `uptime` é útil para verificar quanto tempo o sistema tem estado em execução desde a última reinicialização.
+
+2. **Avaliação da Carga do Sistema:** A carga média do sistema pode indicar o nível de atividade recente. Valores mais altos podem sugerir maior demanda de recursos.
+
+3. **Identificação de Picos de Carga:** Monitorar a carga média ao longo do tempo pode ajudar a identificar picos de carga e tendências, o que pode ser útil para otimizar o desempenho.
+
+4. **Diagnóstico de Desempenho:** O uptime é frequentemente usado como uma métrica inicial ao diagnosticar problemas de desempenho em sistemas.
+
+### Exemplos Adicionais:
+
+- **Formato Mais Legível:**
+  ```bash
+  uptime -p
+  ```
+  Isso fornece uma saída mais legível em termos de dias, horas, minutos, etc.
+
+- **Mostrar Apenas a Carga Média:**
+  ```bash
+  uptime | awk -F'[a-z]:' '{print $2}'
+  ```
+  Este comando utiliza `awk` para extrair apenas a carga média do sistema.
+
+O comando `uptime` é uma ferramenta simples, mas valiosa, para obter uma visão instantânea do tempo de atividade do sistema e da carga média recente, fornecendo informações úteis para administração e monitoramento de sistemas.

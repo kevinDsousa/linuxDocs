@@ -1,0 +1,41 @@
+# Flag &
+
+O uso do símbolo "&" no Linux está relacionado à execução de comandos em segundo plano. Quando você adiciona "&" ao final de um comando na linha de comando, isso faz com que o comando seja executado em segundo plano, permitindo que você continue a usar o terminal para inserir outros comandos enquanto o primeiro ainda está em execução. Aqui estão alguns aspectos importantes sobre o uso do "&" no Linux:
+
+1. **Execução em Segundo Plano:**
+   ```bash
+   comando &
+   ```
+   Adicionando "&" ao final de um comando permite que ele seja executado em segundo plano. Isso é útil para tarefas que podem levar algum tempo para serem concluídas, permitindo que você continue interagindo com o terminal.
+
+2. **Desvinculação do Terminal:**
+   Quando um comando é executado em segundo plano, ele é desvinculado do terminal. Isso significa que o comando não está mais associado à sessão do terminal atual, e você pode fechar o terminal sem interromper a execução do comando em segundo plano.
+
+3. **Visualização de Processos em Execução:**
+   Você pode visualizar os processos em execução, incluindo aqueles em segundo plano, usando o comando `jobs` ou `ps`. O comando `jobs` mostra os trabalhos em segundo plano associados à sessão atual do terminal.
+
+4. **Redirecionamento de Saída e Erro:**
+   Ao executar um comando em segundo plano, você pode redirecionar a saída padrão e os erros para arquivos para revisão posterior. Por exemplo:
+   ```bash
+   comando > saida.txt 2> erro.txt &
+   ```
+
+5. **Sinalização de Processos em Segundo Plano:**
+   Você pode trazer um processo em segundo plano para o primeiro plano usando o comando `fg` (foreground) e enviá-lo de volta para o segundo plano usando `bg` (background).
+
+6. **Exemplo Prático:**
+   ```bash
+   # Executar o comando 'longo_processo' em segundo plano
+   longo_processo &
+   
+   # Continuar a usar o terminal para inserir outros comandos
+   comando_adicional
+   
+   # Visualizar os trabalhos em segundo plano
+   jobs
+   ```
+
+7. **Encerrando Processos em Segundo Plano:**
+   Se necessário, você pode encerrar um processo em segundo plano usando o comando `kill` seguido pelo número do trabalho (`%`) ou PID do processo.
+
+O uso do "&" é valioso para aumentar a eficiência e a produtividade ao trabalhar no terminal, permitindo a execução simultânea de várias tarefas.

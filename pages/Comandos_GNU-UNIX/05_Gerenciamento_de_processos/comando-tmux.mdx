@@ -1,0 +1,77 @@
+# Comando Tmux
+
+O `tmux` (Terminal Multiplexer) é uma ferramenta de terminal em sistemas Unix e Linux que permite criar, gerenciar e interagir com sessões de terminal múltiplas em uma única janela física. Ele oferece recursos poderosos, como a capacidade de dividir a tela horizontal e verticalmente, criar janelas e painéis, e suporta a execução de múltiplos programas simultaneamente em uma única sessão.
+
+### Princípios Básicos:
+
+1. **Sessões:** O `tmux` permite criar sessões de terminal, que podem conter várias janelas e painéis.
+
+2. **Janelas:** Dentro de uma sessão, você pode ter várias janelas, cada uma com seu próprio conjunto de painéis.
+
+3. **Painéis:** Cada janela pode ser dividida em vários painéis, permitindo a execução simultânea de diferentes comandos.
+
+### Comandos Básicos:
+
+1. **Iniciar uma Nova Sessão:**
+   ```bash
+   tmux
+   ```
+   Inicia uma nova sessão do `tmux`.
+
+2. **Listar Sessões Atuais:**
+   ```bash
+   tmux list-sessions
+   ```
+   Exibe uma lista das sessões de `tmux` atualmente em execução.
+
+3. **Anexar a uma Sessão Existente:**
+   ```bash
+   tmux attach-session -t nome_da_sessao
+   ```
+   Conecta-se a uma sessão de `tmux` existente pelo nome.
+
+4. **Desconectar de uma Sessão (Deixar em Segundo Plano):**
+   Dentro da sessão do `tmux`, pressione `Ctrl+b` e em seguida `d` para desconectar sem encerrar a sessão.
+
+5. **Encerrar uma Sessão:**
+   Dentro da sessão do `tmux`, digite:
+   ```bash
+   exit
+   ```
+   Ou, para encerrar a sessão atual sem se desconectar:
+   ```bash
+   tmux kill-session -t nome_da_sessao
+   ```
+
+### Uso Prático:
+
+1. **Dividir a Tela Horizontalmente:**
+   Dentro da sessão do `tmux`, pressione `Ctrl+b` e em seguida `%` para dividir horizontalmente.
+
+2. **Dividir a Tela Verticalmente:**
+   Dentro da sessão do `tmux`, pressione `Ctrl+b` e em seguida `"` para dividir verticalmente.
+
+3. **Alternar Entre Painéis:**
+   Dentro da sessão do `tmux`, pressione `Ctrl+b` e em seguida `o` para alternar entre os painéis.
+
+4. **Criar uma Nova Janela:**
+   Dentro da sessão do `tmux`, pressione `Ctrl+b` e em seguida `c` para criar uma nova janela.
+
+5. **Alternar Entre Janelas:**
+   Dentro da sessão do `tmux`, pressione `Ctrl+b` e em seguida `n` para ir para a próxima janela ou `Ctrl+b` e em seguida `p` para a janela anterior.
+
+6. **Visualizar Lista de Janelas:**
+   Dentro da sessão do `tmux`, pressione `Ctrl+b` e em seguida `w` para ver uma lista visual de janelas e selecionar uma.
+
+### Exemplos Adicionais:
+
+- **Renomear uma Sessão:**
+   Dentro da sessão do `tmux`, pressione `Ctrl+b` e em seguida, digite `:` para entrar no modo de comando, depois digite:
+   ```bash
+   rename-session novo_nome
+   ```
+
+- **Configuração Personalizada:**
+   O `tmux` suporta configurações personalizadas. Um arquivo de configuração pode ser criado em `~/.tmux.conf` para definir preferências e atalhos personalizados.
+
+O `tmux` é especialmente útil em ambientes de servidores remotos ou quando você precisa executar e monitorar várias tarefas simultaneamente em um terminal. Ele fornece uma experiência de terminal mais flexível e eficiente.

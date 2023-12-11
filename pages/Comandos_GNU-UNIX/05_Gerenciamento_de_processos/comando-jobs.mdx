@@ -1,0 +1,61 @@
+# Comando Jobs
+
+O comando `jobs` no sistema Unix e Linux é utilizado para listar os trabalhos (jobs) em segundo plano associados à sessão do terminal atual. Aqui estão alguns aspectos importantes sobre o comando `jobs`:
+
+1. **Listar Trabalhos em Segundo Plano:**
+   O comando básico é simples:
+   ```bash
+   jobs
+   ```
+   Este comando exibirá uma lista dos trabalhos em segundo plano ativos na sessão do terminal atual. Cada trabalho é identificado por um número e estado (como "Running" ou "Stopped").
+
+2. **Número de Trabalho:**
+   Cada trabalho em segundo plano é associado a um número. Você pode referenciar um trabalho usando esse número, precedido por um sinal de porcentagem (%). Por exemplo, `%1` refere-se ao primeiro trabalho listado.
+
+3. **Opções do Comando `jobs`:**
+   - `-l`: Exibe informações detalhadas sobre cada trabalho, incluindo o PID, o status e o comando.
+   - `-p`: Exibe apenas os PIDs (Identificadores de Processo) dos trabalhos.
+   - `-r`: Exibe apenas trabalhos em execução.
+   - `-s`: Exibe apenas trabalhos parados.
+
+   ```bash
+   jobs -l
+   ```
+
+4. **Trazer Trabalho para o Primeiro Plano:**
+   Você pode trazer um trabalho em segundo plano para o primeiro plano usando o comando `fg` (foreground) seguido pelo número do trabalho ou `%`.
+   ```bash
+   fg %1
+   ```
+
+5. **Enviar Trabalho para o Segundo Plano:**
+   Se um trabalho estiver em execução no primeiro plano e você deseja enviá-lo para o segundo plano, use o comando `bg` (background) seguido pelo número do trabalho ou `%`.
+   ```bash
+   bg %1
+   ```
+
+6. **Encerrar Trabalhos:**
+   Use o comando `kill` para encerrar um trabalho em segundo plano. O número do trabalho ou PID pode ser usado como argumento.
+   ```bash
+   kill %1
+   ```
+
+7. **Exemplo Prático:**
+   ```bash
+   # Executar um comando em segundo plano
+   longo_processo &
+   
+   # Listar os trabalhos em segundo plano
+   jobs
+   
+   # Trazer o trabalho para o primeiro plano
+   fg %1
+   
+   # Enviar o trabalho de volta para o segundo plano
+   bg %1
+   
+   # Encerrar o trabalho
+   kill %1
+   ```
+
+O comando `jobs` é útil para monitorar e gerenciar tarefas em segundo plano, permitindo que você acompanhe o status dos trabalhos e tome ações, como trazê-los para o primeiro plano, enviá-los para o segundo plano ou encerrá-los.

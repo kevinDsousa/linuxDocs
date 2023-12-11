@@ -1,0 +1,68 @@
+# Comando Screen
+
+O comando `screen` é uma ferramenta poderosa em sistemas Unix e Linux que fornece uma maneira de criar sessões de terminal multiplexadas. Ele permite que você execute várias sessões de terminal em uma única janela ou em segundo plano, facilitando a gestão de várias tarefas de forma eficiente. Aqui estão alguns conceitos e comandos-chave relacionados ao `screen`:
+
+### Princípios Básicos:
+
+1. **Sessões:** O `screen` permite criar várias sessões de terminal dentro de uma única sessão de terminal física. Cada sessão funciona de forma independente.
+
+2. **Multiplexação:** Você pode alternar entre diferentes sessões ou dividi-las horizontal e verticalmente na mesma janela física.
+
+3. **Execução em Segundo Plano:** As sessões podem ser executadas em segundo plano, permitindo que você desconecte do terminal físico sem interromper as tarefas em execução.
+
+### Comandos Principais:
+
+1. **Iniciar uma Nova Sessão:**
+   ```bash
+   screen
+   ```
+   Isso inicia uma nova sessão do `screen`.
+
+2. **Listar Sessões Atuais:**
+   ```bash
+   screen -ls
+   ```
+   Exibe uma lista das sessões de `screen` atualmente em execução.
+
+3. **Conectar a uma Sessão Existente:**
+   ```bash
+   screen -r [ID_da_Sessão]
+   ```
+   Conecta-se a uma sessão existente. Se houver apenas uma sessão, você pode simplesmente usar `screen -r`.
+
+4. **Desconectar de uma Sessão:**
+   Dentro da sessão do `screen`, pressione `Ctrl+a` e em seguida `d` para desconectar sem encerrar a sessão.
+
+5. **Encerrar uma Sessão:**
+   Dentro da sessão do `screen`, pressione `Ctrl+a` e em seguida `k` para encerrar a sessão.
+
+6. **Criar Janelas Múltiplas:**
+   Dentro da sessão do `screen`, pressione `Ctrl+a` e em seguida `c` para criar uma nova janela.
+
+7. **Navegar Entre Janelas:**
+   Dentro da sessão do `screen`, pressione `Ctrl+a` e em seguida `n` para ir para a próxima janela ou `Ctrl+a` e em seguida `p` para a janela anterior.
+
+8. **Dividir a Tela Horizontalmente:**
+   Dentro da sessão do `screen`, pressione `Ctrl+a` e em seguida `S` para dividir horizontalmente. Use `Ctrl+a` e `Tab` para alternar entre as regiões.
+
+9. **Dividir a Tela Verticalmente:**
+   Dentro da sessão do `screen`, pressione `Ctrl+a` e em seguida `%` para dividir verticalmente.
+
+10. **Sair de uma Região Dividida:**
+   Dentro de uma região dividida, pressione `Ctrl+a` e em seguida `Q` para sair da região dividida.
+
+### Uso Prático:
+
+- **Execução em Segundo Plano:**
+  Você pode iniciar uma sessão do `screen`, executar tarefas dentro dela e, em seguida, desconectar sem interromper as tarefas em execução.
+
+- **Persistência de Sessões:**
+  Mesmo se a conexão com o servidor for perdida, você pode reconectar e retomar as sessões do `screen`.
+
+- **Gestão Eficiente de Tarefas:**
+  O `screen` é útil para organizar e gerenciar várias tarefas simultaneamente, especialmente em servidores remotos.
+
+- **Manutenção de Tarefas em Longo Prazo:**
+  O `screen` é eficaz para manter tarefas em execução por longos períodos, independentemente de desconexões ou fechamento do terminal.
+
+O `screen` é uma ferramenta versátil e poderosa, sendo particularmente útil em ambientes de servidor remoto e para usuários que precisam gerenciar várias tarefas simultaneamente.

@@ -1,0 +1,47 @@
+# Comando Nohup
+
+O comando `nohup` no Linux é usado para executar um comando de forma que ele continue a ser executado mesmo após o término da sessão do terminal ou se desconectar da máquina. O nome `nohup` significa "no hang-up", onde "hang-up" se refere à ação de desconectar um terminal.
+
+A principal utilidade do `nohup` é permitir a execução de processos em segundo plano que continuam a ser executados mesmo quando o usuário fecha a sessão do terminal. Isso é especialmente útil para evitar que a interrupção de uma conexão SSH ou o fechamento de um terminal interrompa a execução de um processo longo.
+
+### Sintaxe Básica:
+
+```bash
+nohup comando [argumentos] &
+```
+
+- `comando`: O comando que você deseja executar.
+- `argumentos`: Quaisquer argumentos necessários para o comando.
+- `&`: Envia o comando para execução em segundo plano.
+
+### Exemplo de Uso:
+
+```bash
+nohup longo_processo &
+```
+
+Este comando iniciará o processo `longo_processo` em segundo plano usando o `nohup`, permitindo que ele continue a ser executado mesmo após o fechamento da sessão do terminal.
+
+### Saída Padrão e Saída de Erro:
+
+O `nohup` redireciona automaticamente a saída padrão (stdout) e a saída de erro (stderr) para arquivos chamados `nohup.out` no diretório em que o comando foi executado. Isso é útil para revisar a saída do comando mesmo após o fechamento da sessão do terminal.
+
+### Exemplo Prático:
+
+```bash
+nohup ./meu_script.sh &
+```
+
+Este exemplo executa o script `meu_script.sh` em segundo plano usando o `nohup`. A saída padrão e de erro será redirecionada para `nohup.out` no mesmo diretório.
+
+### Considerações Importantes:
+
+1. **Sessão Desvinculada:** O `nohup` desvincula o processo da sessão do terminal, permitindo que ele continue a ser executado mesmo que o terminal seja fechado.
+
+2. **Saída Redirecionada:** A saída padrão e a saída de erro do comando são redirecionadas automaticamente para o arquivo `nohup.out`.
+
+3. **Segurança:** O uso do `nohup` é útil para proteger a execução de processos longos contra desconexões acidentais do terminal ou da sessão SSH.
+
+4. **Monitoramento:** Após iniciar um comando com `nohup`, você pode monitorar o progresso revisando o conteúdo do arquivo `nohup.out`.
+
+O comando `nohup` é valioso quando você precisa executar tarefas demoradas ou processos que não devem ser interrompidos quando você fecha a sessão do terminal ou se desconecta de uma máquina remota.

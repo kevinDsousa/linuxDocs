@@ -1,0 +1,72 @@
+# Comando Free
+
+O comando `free` é uma ferramenta de linha de comando disponível em sistemas Unix e Linux, que exibe informações sobre a utilização de memória no sistema. Ele fornece detalhes sobre a memória física (RAM), memória de troca (swap) e como esses recursos estão sendo utilizados pelo sistema operacional e pelos processos em execução.
+
+### Sintaxe Básica:
+
+```bash
+free [opções]
+```
+
+### Opções Comuns:
+
+- `-b`, `--bytes`: Exibe os valores em bytes.
+- `-k`, `--kilo`: Exibe os valores em kilobytes (padrão).
+- `-m`, `--mega`: Exibe os valores em megabytes.
+- `-g`, `--giga`: Exibe os valores em gigabytes.
+- `-t`, `--total`: Exibe uma linha adicional mostrando o total de memória física e de troca.
+- `-h`, `--human`: Mostra os números de forma mais legível (por exemplo, "1.2G" em vez de "1234567890").
+
+### Exemplo Básico:
+
+```bash
+free
+```
+
+Este comando exibe informações sobre a memória física e de troca em kilobytes.
+
+### Exemplo com Opções:
+
+```bash
+free -m
+```
+
+Este comando exibe informações sobre a memória em megabytes.
+
+### Exemplo com Total:
+
+```bash
+free -t -m
+```
+
+Este comando exibe informações sobre a memória em megabytes e inclui uma linha adicional com o total.
+
+### Saída Típica:
+
+A saída do comando `free` geralmente se parece com o seguinte:
+
+```
+              total        used        free      shared  buff/cache   available
+Mem:        1635516      778908      210136       53124      646472      693436
+Swap:        999996       10588      989408
+Total:      2635512      789496     1192544
+```
+
+Os campos mais comuns incluem:
+
+- **total:** Quantidade total de memória física e de troca.
+- **used:** Quantidade de memória atualmente em uso.
+- **free:** Quantidade de memória disponível para uso imediato.
+- **shared:** Memória compartilhada entre processos.
+- **buff/cache:** Quantidade de memória utilizada por buffers do sistema operacional e cache de disco.
+- **available:** Quantidade de memória que pode ser prontamente liberada para uso pelos processos.
+
+### Uso Prático:
+
+- **Monitoramento de Recursos:** O comando `free` é útil para monitorar o uso de memória e identificar possíveis problemas de alocação.
+  
+- **Diagnóstico de Problemas:** Pode ser utilizado para diagnosticar problemas de desempenho relacionados à memória.
+
+- **Ajuste de Configurações:** Ao entender como a memória está sendo utilizada, é possível ajustar configurações do sistema para otimizar o desempenho.
+
+O comando `free` fornece uma visão rápida e útil do estado da memória no sistema e é uma ferramenta valiosa para administradores de sistemas e usuários avançados.
